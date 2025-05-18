@@ -52,11 +52,14 @@ export default function About() {
   ]
 
   const downloadResume = () => {
-    // Replace with actual resume download logic
-    alert("Resume download functionality will be implemented here")
-    // Alternatively, you can use a direct link to a PDF file:
-    // window.open("/path-to-your-resume.pdf", "_blank")
-  }
+  const link = document.createElement("a");
+  link.href = "/Resume.pdf";
+  link.download = "Balasurya-Resume.pdf"; // You can rename the download file
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
 
   return (
     <section id="about" className="py-20 bg-black/50 backdrop-blur-sm relative overflow-hidden">
