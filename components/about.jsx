@@ -13,7 +13,7 @@ export default function About() {
 
   const stats = [
     { value: 10, label: "Projects Completed" },
-    { value: 3, label: "Years Experience" },
+    { value: 1, label: "Years Experience" },
     { value: 5, label: "Technologies" },
     { value: 15, label: "Happy Clients" },
   ]
@@ -22,14 +22,14 @@ export default function About() {
     {
       title: "Full Stack Developer",
       company: "Tech Solutions Inc.",
-      period: "2022 - Present",
+      period: "2023 - Present",
       description:
         "Developing full-stack web applications using React, Django, and Python. Implementing responsive designs and integrating RESTful APIs.",
     },
     {
       title: "Frontend Developer Intern",
       company: "Web Innovators",
-      period: "2021 - 2022",
+      period: "2024 - Present",
       description:
         "Assisted in developing user interfaces using HTML, CSS, and JavaScript. Collaborated with senior developers on various projects.",
     },
