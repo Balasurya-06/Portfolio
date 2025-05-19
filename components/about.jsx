@@ -45,7 +45,7 @@ export default function About() {
     },
     {
       degree: "Higher Secondary Education",
-      institution: "St. Joseph's Higher Secondary School",
+      institution: "Thamarai Matric Higher Secondary School",
       period: "2021 - 2023",
       description: "Completed higher secondary education with a focus on Computer Science and Mathematics.",
     },
