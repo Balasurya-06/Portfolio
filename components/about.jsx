@@ -111,14 +111,16 @@ export default function About() {
                     <div className="pl-6">
                       <h3 className="text-2xl font-bold text-white mb-4">Who I Am</h3>
                       <p className="text-gray-300 mb-4">
-                        I'm Bala Surya S, a passionate Full Stack Developer with expertise in Django, React, and Python.
-                        I specialize in building responsive web applications that deliver exceptional user experiences
-                        while maintaining robust functionality.
+                        I'm Bala Surya S, a passionate Full Stack Developer and Co-Founder, CFO, and CMO of Xyndrix Software Company.
                       </p>
                       <p className="text-gray-300">
-                        With a strong foundation in both frontend and backend technologies, I enjoy solving complex
-                        problems and turning ideas into reality through code. I'm constantly learning and exploring new
-                        technologies to stay at the forefront of web development.
+                        I specialize in building responsive and scalable web applications using Django, React, and Python.
+With a focus on clean design and strong functionality, I aim to deliver seamless user experiences.
+I'm also an active member of the Metaverse Students Association at Karpagam Academy of Higher Education.
+
+
+
+
                       </p>
                     </div>
                   </div>

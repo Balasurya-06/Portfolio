@@ -33,7 +33,7 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  const navItems = ["about", "skills", "projects", "education", "contact"]
+  const navItems = ["about", "skills", "Company", "education", "contact"]
 
   return (
     <motion.nav
