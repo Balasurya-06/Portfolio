@@ -10,7 +10,7 @@ import Education from "@/components/education"
 import Contact from "@/components/contact"
 import Footer from "@/components/footer"
 import CustomCursor from "@/components/custom-cursor"
-import DynamicBackground from "@/components/dynamic-background"
+import Aurora from "@/components/aurora"
 
 export default function Home() {
   // Disable default cursor
@@ -35,7 +35,14 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
       <CustomCursor />
-      <DynamicBackground />
+      <div className="fixed inset-0 z-0">
+        <Aurora 
+          colorStops={['#5227FF', '#7cff67', '#5227FF']}
+          amplitude={1.0}
+          blend={0.5}
+          speed={1.0}
+        />
+      </div>
 
       <div className="relative z-10">
         <Navbar />

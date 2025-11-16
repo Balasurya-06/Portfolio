@@ -7,32 +7,16 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   const socialLinks = [
-    { icon: <GithubIcon className="h-5 w-5" />, url: "https://github.com/balasurya", label: "GitHub" },
+    { icon: <GithubIcon className="h-5 w-5" />, url: "https://github.com/Balasurya-06/", label: "GitHub" },
     { icon: <LinkedinIcon className="h-5 w-5" />, url: "https://linkedin.com/in/balasurya", label: "LinkedIn" },
     { icon: <WhatsappIcon className="h-5 w-5" />, url: "https://wa.me/919597075831", label: "WhatsApp" },
     { icon: <Mail className="h-5 w-5" />, url: "mailto:balasurya9597@gmail.com", label: "Email" },
   ]
 
-  // Xyndrix Logo Component for Footer
-  const XyndrixLogo = () => (
-    <div className="flex items-center gap-2">
-      <div className="w-6 h-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-md flex items-center justify-center p-0.5">
-        <img
-          src="/xyndrix.png"
-          alt="Xyndrix Logo"
-          className="w-full h-full object-contain"
-        />
-      </div>
-      <span className="text-lg font-semibold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500">
-        Xyndrix
-      </span>
-    </div>
-  )
-
   return (
-    <footer className="bg-gray-900 text-white py-16 border-t border-purple-900/20">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+    <footer className="relative overflow-hidden text-white py-16 border-t border-white/10 backdrop-blur-sm">
+      <div className="container mx-auto px-6 lg:px-16">
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
           {/* Personal Info */}
           <motion.div
             className="space-y-4"
@@ -41,18 +25,18 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-orange-500 to-orange-500 bg-clip-text text-transparent">
               Bala Surya S
             </h2>
             
             <div className="space-y-2">
               <div className="flex items-center gap-2 text-gray-300">
-                <Briefcase className="h-4 w-4 text-purple-400" />
+                <Briefcase className="h-4 w-4 text-orange-500" />
                 <span>Full Stack Developer</span>
               </div>
               
               <div className="flex items-center gap-2 text-gray-300">
-                <MapPin className="h-4 w-4 text-purple-400" />
+                <MapPin className="h-4 w-4 text-orange-500" />
                 <span>Tamil Nadu, India</span>
               </div>
             </div>
@@ -63,41 +47,13 @@ export default function Footer() {
             </p>
           </motion.div>
 
-          {/* Company Info */}
-          <motion.div
-            className="space-y-4"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-          >
-            <div className="space-y-3">
-              <XyndrixLogo />
-              <p className="text-gray-300 text-sm">Software Company</p>
-              <p className="text-gray-400 text-sm leading-relaxed">
-                Co-Founder, CFO & CMO at Xyndrix - Transforming ideas into digital reality through 
-                innovative software solutions and cutting-edge technology.
-              </p>
-            </div>
-
-            <div className="space-y-2">
-              <h4 className="text-white font-medium">Services</h4>
-              <ul className="text-gray-400 text-sm space-y-1">
-                <li>• Web Development</li>
-                <li>• Mobile Applications</li>
-                <li>• AI/ML Solutions</li>
-                <li>• Cloud Services</li>
-              </ul>
-            </div>
-          </motion.div>
-
           {/* Contact & Social */}
           <motion.div
             className="space-y-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
           >
             <h3 className="text-xl font-semibold text-white">Let's Connect</h3>
             
@@ -113,14 +69,14 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={link.label}
-                  className="bg-gray-800 p-3 rounded-full hover:bg-purple-900/50 transition-all duration-300 hover-target group"
+                  className="backdrop-blur-sm bg-white/5 border border-white/10 p-3 rounded-xl hover:bg-orange-500/20 hover:border-orange-500/50 transition-all duration-300 hover-target group"
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.3, delay: index * 0.1 }}
                   whileHover={{ y: -5, scale: 1.1 }}
                 >
-                  <div className="group-hover:text-purple-400 transition-colors">
+                  <div className="group-hover:text-orange-500 transition-colors">
                     {link.icon}
                   </div>
                 </motion.a>
@@ -130,7 +86,7 @@ export default function Footer() {
             <div className="pt-4">
               <motion.a
                 href="mailto:balasurya9597@gmail.com"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 text-sm font-medium"
+                className="inline-flex items-center gap-2 bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition-all duration-300 text-sm font-semibold shadow-lg shadow-orange-500/30"
                 whileHover={{ scale: 1.05 }}
               >
                 <Mail className="h-4 w-4" />
@@ -142,7 +98,7 @@ export default function Footer() {
 
         {/* Bottom Section */}
         <motion.div
-          className="border-t border-gray-800 pt-8"
+          className="border-t border-white/10 pt-8"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -154,7 +110,9 @@ export default function Footer() {
             </p>
             
             <div className="flex items-center gap-4 text-gray-400 text-sm">
-              <span>Built with ❤️ using React & Next.js</span>
+              <span>Vygron Technologies</span>
+              <span>/</span>
+              <span>Xyndrix</span>
             </div>
           </div>
         </motion.div>
