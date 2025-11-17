@@ -100,7 +100,7 @@ export default function About() {
                 transition={{ delay: 0.4 }}
                 className="text-gray-300 text-lg leading-relaxed"
               >
-                I started my software journey from photography. Through that, I learned to love the process of creating from scratch. Since then, this has led me to software development as it fulfills my love for learning and building things.
+                I'm Bala Surya, born on 2 July 2006 in Paruvai, a quiet agriculture-based village that shaped my values of discipline, patience, and hard work. My interest in technology began early during my schooling at Literacy Mission Matric Hr. Sec. School, where I completed LKG to 10th, followed by Thamarai Matric Hr. Sec. School for 11th and 12th, which further strengthened my passion for computers, coding, and creativity. Today, I'm pursuing B.E. CSE at Karpagam Academy of Higher Education (2023–2027), where I discovered my purpose — building technology that blends innovation with real-world impact. I am now the Founder of Vygron and Co-Founder of Xyndrix, working on practical, modern, and powerful software solutions while also serving as a Lead in the Metaverse Association, exploring immersive 3D experiences and futuristic technologies. From a small village dreamer to an emerging tech innovator, I'm driven by the vision to create meaningful products and prove that innovation has no boundaries.
               </motion.p>
             </div>
 
