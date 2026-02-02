@@ -33,12 +33,12 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  const navItems = ["about", "skills", "Company", "education", "contact"]
+  const navItems = ["about", "projects", "contact"]
 
   return (
     <motion.nav
-      className={`sticky top-0 z-50 transition-all duration-300 ${
-        scrolled ? "backdrop-blur-xl bg-black/50 border-b border-white/5" : "bg-transparent"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled ? "backdrop-blur-xl bg-white/70 border-b border-gray-200 shadow-sm" : "bg-transparent"
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -46,7 +46,7 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-6 lg:px-16 py-6 flex justify-between items-center">
         <motion.div
-          className="text-xl font-bold text-white"
+          className="text-xl font-bold text-[#1a1a1a]"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
@@ -60,7 +60,7 @@ export default function Navbar() {
             <motion.button
               key={item}
               onClick={() => scrollToSection(item)}
-              className="text-gray-300 hover:text-white capitalize font-medium transition-colors hover-target"
+              className="text-gray-600 hover:text-black capitalize font-semibold transition-colors hover-target"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -72,7 +72,7 @@ export default function Navbar() {
 
         {/* Mobile Navigation Toggle */}
         <motion.button className="md:hidden hover-target" onClick={toggleMenu} whileTap={{ scale: 0.9 }}>
-          {isMenuOpen ? <X className="text-white" /> : <Menu className="text-white" />}
+          {isMenuOpen ? <X className="text-black" /> : <Menu className="text-black" />}
         </motion.button>
       </div>
 
@@ -80,7 +80,7 @@ export default function Navbar() {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
-            className="md:hidden bg-black/95 backdrop-blur-md border-b border-purple-900/20"
+            className="md:hidden bg-white/95 backdrop-blur-md border-b border-gray-200"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
@@ -91,7 +91,7 @@ export default function Navbar() {
                 <motion.button
                   key={item}
                   onClick={() => scrollToSection(item)}
-                  className="text-gray-300 hover:text-purple-400 py-2 capitalize text-left hover-target"
+                  className="text-gray-600 hover:text-yellow-500 py-2 capitalize text-left hover-target font-medium"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.3, delay: index * 0.1 }}

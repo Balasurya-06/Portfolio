@@ -79,20 +79,21 @@ export default function CustomCursor() {
       y: mousePosition.y - 16,
       height: 32,
       width: 32,
-      backgroundColor: "rgba(145, 92, 255, 0.2)",
-      border: "2px solid rgba(145, 92, 255, 0.5)",
+      backgroundColor: "transparent",
+      border: "1px solid white",
       transition: {
         type: "spring",
         mass: 0.6,
       },
     },
     hover: {
-      x: mousePosition.x - 24,
-      y: mousePosition.y - 24,
-      height: 48,
-      width: 48,
-      backgroundColor: "rgba(145, 92, 255, 0.3)",
-      border: "2px solid rgba(145, 92, 255, 0.8)",
+      x: mousePosition.x - 32,
+      y: mousePosition.y - 32,
+      height: 64,
+      width: 64,
+      backgroundColor: "white",
+      border: "1px solid white",
+      mixBlendMode: "difference",
       transition: {
         type: "spring",
         mass: 0.6,
@@ -103,8 +104,8 @@ export default function CustomCursor() {
       y: mousePosition.y - 16,
       height: 32,
       width: 32,
-      backgroundColor: "rgba(145, 92, 255, 0.6)",
-      border: "2px solid rgba(145, 92, 255, 1)",
+      backgroundColor: "white",
+      border: "1px solid white",
       transition: {
         type: "spring",
         mass: 0.6,
@@ -147,11 +148,13 @@ export default function CustomCursor() {
     <>
       <motion.div
         className="cursor-ring fixed top-0 left-0 w-8 h-8 rounded-full pointer-events-none z-[9999]"
+        style={{ mixBlendMode: "difference" }}
         variants={variants}
         animate={cursorVariant}
       />
       <motion.div
-        className="cursor-dot fixed top-0 left-0 w-2 h-2 bg-purple-500 rounded-full pointer-events-none z-[9999]"
+        className="cursor-dot fixed top-0 left-0 w-2 h-2 bg-white rounded-full pointer-events-none z-[9999]"
+        style={{ mixBlendMode: "difference" }}
         variants={cursorDotVariants}
         animate={cursorVariant}
       />
