@@ -1,18 +1,33 @@
 import { Inter } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
+import Navbar from "@/components/navbar"
 
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "Bala Surya | Full Stack Developer & AI Specialist - Vygron Technology, Paruvai – Palladam – Tirupur",
-  description: "Bala Surya is a passionate Full Stack Developer & AI Specialist from Paruvai, Palladam, Tirupur. Founder of Vygron Technology, specializing in Next.js, MERN Stack, and Custom AI Agents.",
+  title: "Bala Surya S | Founder of Vygron & AI Specialist | Top Rated Developer in Tirupur",
+  description: "Bala Surya Suresh (Bala Surya S) is the Founder of Vygron Technology and a leading Full Stack Developer & AI Specialist based in Paruvai, Palladam, Tirupur. Expert in Next.js, Agentic AI, and Scalable Web Solutions.",
   keywords: [
-    "Bala Surya", "Vygron Technology", "Full Stack Developer", "AI Specialist", "Paruvai", "Palladam", "Tirupur", "Coimbatore", "Tamil Nadu", "South India",
-    "Next.js Developer", "MERN Stack", "Agentic AI", "Computer Vision", "React Native", "Node.js", "Python", "Machine Learning",
-    "OpenCV", "TensorFlow", "PyTorch", "Docker", "Redis", "PostgreSQL", "MongoDB", "Tailwind CSS", "Shadcn UI",
-    "IEEE Student Branch", "Karpagam Academy of Higher Education", "Hackathon Organizer", "Startup Founder", "Student Entrepreneur",
-    "Web Development Agency Tirupur", "AI Automation Solutions", "SaaS Developer"
+    // Name Variations
+    "Bala Surya", "Balasurya Suresh", "Bala Surya S", "S Bala Surya", "Bala Surya Vygron", "Balasurya KAHE",
+    
+    // Roles & Titles
+    "Founder of Vygron", "CEO of Vygron Technology", "Vygron Tech Founder", "Student Entrepreneur India", "Youngest CEO Tirupur",
+    "Full Stack Developer", "AI Engineer", "Software Architect", "Freelance Web Developer Tirupur", "Best Developer 2024",
+    
+    // Tech Stack & Skills
+    "Next.js Expert", "React.js Developer", "MERN Stack Specialist", "Agentic AI Developer", "Generative AI Solutions",
+    "Computer Vision Engineer", "Python Developer", "Node.js Expert", "Tailwind CSS Master", "Firebase Developer",
+    "Mobile App Developer", "React Native", "PostgreSQL", "MongoDB", "Docker", "AWS", "Vercel Deployment",
+    
+    // Location Specific
+    "Web Design Paruvai", "Software Company Palladam", "Best IT Services Tirupur", "Web Development Coimbatore", 
+    "Top Developer Tamil Nadu", "Tech Startup South India", "Digital Agency Tirupur",
+    
+    // Education & achievements
+    "Karpagam Academy of Higher Education", "KAHE Alumnus", "Karpagam Innovation", "Hackathon Winner", 
+    "Smart India Hackathon", "IEEE Chair KAHE", "Anti Terrorism Squad Tech Partner"
   ],
   authors: [{ name: "Bala Surya" }],
   creator: "Bala Surya",
@@ -55,6 +70,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="dark" forcedTheme="dark">
+          <Navbar />
           {children}
         </ThemeProvider>
         <script

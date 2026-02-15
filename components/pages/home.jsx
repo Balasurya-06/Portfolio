@@ -1,16 +1,18 @@
 "use client"
 import { useEffect } from "react"
 import { motion } from "framer-motion"
-import Navbar from "@/components/navbar"
 import Hero from "@/components/pages/hero"
 import About from "@/components/pages/about"
-import TableOfContents from "@/components/pages/table-of-contents"
+
 import Projects from "@/components/pages/projects"
 import Contact from "@/components/pages/contact"
 import Footer from "@/components/footer"
 import CustomCursor from "@/components/custom-cursor"
 
 import WorkTogether from "@/components/pages/work-together"
+import HonorsAwards from "@/components/pages/honors-awards"
+import OfficialPartners from "@/components/pages/official-partners"
+import GalleryPage from "@/components/pages/gallery"
 
 export default function HomePage() {
   // Disable default cursor
@@ -42,7 +44,6 @@ export default function HomePage() {
       */}
 
       <div className="relative z-10">
-        <Navbar />
         <main>
           <Hero />
 
@@ -55,14 +56,7 @@ export default function HomePage() {
             <About />
           </motion.div>
 
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            variants={sectionVariants}
-          >
-            <TableOfContents />
-          </motion.div>
+
 
           {/* Existing Sections below the main "Image Match" content */}
           <motion.div
@@ -71,9 +65,37 @@ export default function HomePage() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
             variants={sectionVariants}
-            className="bg-[#1a1a1a] text-white py-20" // Dark section for projects to contrast
           >
             <Projects />
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={sectionVariants}
+          >
+            <HonorsAwards />
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={sectionVariants}
+          >
+            <OfficialPartners />
+          </motion.div>
+
+          {/* New Gallery Section directly in Home Page */}
+           <motion.div
+            id="gallery"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={sectionVariants}
+          >
+            <GalleryPage />
           </motion.div>
 
            <motion.div
@@ -81,7 +103,7 @@ export default function HomePage() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
             variants={sectionVariants}
-            className="container mx-auto px-6 lg:px-16 mb-20 relative z-20"
+            className="w-[90%] mx-auto px-6 lg:px-16 mb-20 relative z-20"
           >
             <WorkTogether />
           </motion.div>

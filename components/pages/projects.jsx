@@ -55,7 +55,7 @@ export default function Projects() {
 
   return (
     <section id="projects" className="relative py-24 bg-[#e6e6e6] text-[#1a1a1a]">
-      <div className="container mx-auto px-6 lg:px-16 relative z-10">
+      <div className="w-[90%] mx-auto px-6 lg:px-16 relative z-10">
         
         {/* Section Header */}
         <motion.div 
@@ -76,7 +76,7 @@ export default function Projects() {
         </motion.div>
 
         {/* Bento Grid Layout - VYGRON */}
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-6 mb-20">
+        <div className="w-full mx-auto grid grid-cols-1 md:grid-cols-12 gap-6 mb-20">
             
             {/* 1. Main Identity Card (Large) */}
             <motion.div 
@@ -85,37 +85,39 @@ export default function Projects() {
                 viewport={{ once: true }}
                 className="md:col-span-8 bg-white border-4 border-black rounded-[2rem] p-8 md:p-12 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] transition-all duration-300 relative overflow-hidden group"
             >
-                <div className="absolute top-0 right-0 p-4">
-                    <div className="bg-yellow-400 border-2 border-black px-4 py-1 rounded-full font-bold text-xs uppercase tracking-wider">
+                {/* Background Pattern */}
+                <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, #000 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
+                
+                <div className="absolute top-0 right-0 p-4 z-20">
+                    <div className="bg-yellow-400 border-2 border-black px-4 py-1 rounded-full font-bold text-xs uppercase tracking-wider transform rotate-3">
                         Flagship
                     </div>
                 </div>
                 
-                <div className="flex flex-col md:flex-row items-start gap-8 relative z-10">
-                    <div className="w-28 h-28 bg-black rounded-3xl flex items-center justify-center p-4 border-2 border-black flex-shrink-0 group-hover:rotate-6 transition-transform duration-300">
+                <div className="flex flex-col md:flex-row items-center gap-8 relative z-10">
+                    <div className="w-32 h-32 bg-white rounded-3xl flex items-center justify-center p-4 border-4 border-black flex-shrink-0 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] group-hover:rotate-6 transition-transform duration-300">
                         <img src={company.logo} alt="Vygron Logo" className="w-full h-full object-contain" />
                     </div>
-                    <div className="space-y-4">
+                    <div className="space-y-4 text-center md:text-left flex-1">
                         <div>
                             <h3 className="text-4xl md:text-6xl font-black uppercase leading-none tracking-tighter mb-2">{company.name}</h3>
-                            <p className="text-xl font-bold text-gray-400">{company.tagline}</p>
+                            <p className="text-xl font-bold text-gray-500 bg-yellow-100 inline-block px-2 transform -rotate-1">{company.tagline}</p>
                         </div>
-                        <p className="text-lg font-medium leading-relaxed max-w-xl">
+                        <p className="text-lg font-medium leading-relaxed">
                             {company.description}
                         </p>
-                        <div className="pt-2">
-                            <div className="inline-flex items-center gap-2 px-4 py-2 border-2 border-black rounded-lg bg-gray-100 mb-4">
+                        
+                        <div className="pt-4 flex flex-wrap gap-4 justify-center md:justify-start">
+                            <div className="inline-flex items-center gap-2 px-4 py-2 border-2 border-black rounded-lg bg-white">
                                <Briefcase className="w-4 h-4" />
                                <span className="font-bold">{company.role}</span>
                             </div>
-                            <div className="flex">
-                                <Button 
-                                    onClick={() => window.open(company.website, "_blank")}
-                                    className="bg-yellow-400 text-black border-2 border-black rounded-xl hover:bg-yellow-500 hover:translate-y-[-2px] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all text-lg font-bold px-8 py-6"
-                                >
-                                    Visit Website <ArrowUpRight className="ml-2 w-6 h-6" />
-                                </Button>
-                            </div>
+                            <Button 
+                                onClick={() => window.open(company.website, "_blank")}
+                                className="bg-black text-white border-2 border-black rounded-xl hover:bg-gray-800 hover:translate-y-[-2px] hover:shadow-lg transition-all text-lg font-bold px-8 py-6"
+                            >
+                                Visit Website <ArrowUpRight className="ml-2 w-5 h-5" />
+                            </Button>
                         </div>
                     </div>
                 </div>
@@ -127,25 +129,27 @@ export default function Projects() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="md:col-span-4 bg-black text-white border-4 border-black rounded-[2rem] p-8 shadow-[8px_8px_0px_0px_rgba(100,100,100,1)] flex flex-col justify-between relative overflow-hidden"
+                className="md:col-span-4 bg-yellow-400 text-black border-4 border-black rounded-[2rem] p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] flex flex-col justify-between relative overflow-hidden"
             >
+                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/20 rounded-full blur-2xl -mr-16 -mt-16"></div>
+                 
                  <div className="relative z-10">
                      <div className="mb-8">
-                        <p className="text-gray-500 font-bold text-xs uppercase tracking-widest mb-2">Global Impact</p>
-                        <div className="flex items-center gap-3">
-                            <h3 className="text-4xl font-black text-white">Digital <span className="text-yellow-400">.</span></h3>
+                        <div className="inline-block px-3 py-1 bg-black text-white text-xs font-bold uppercase rounded-full mb-4">
+                            Global Impact
                         </div>
-                        <p className="text-gray-400 font-medium mt-2 leading-relaxed">Transforming businesses with scalable digital solutions.</p>
+                        <h3 className="text-4xl font-black text-black leading-tight">Digital Solutions<span className="text-white">.</span></h3>
+                        <p className="text-black font-bold mt-2 leading-relaxed border-l-4 border-black pl-4">Transforming businesses with scalable technologies.</p>
                      </div>
 
                      <div>
                         <div className="flex items-center gap-2 mb-4">
-                            <div className="w-2 h-2 rounded-full bg-yellow-400 animate-pulse"></div>
-                            <h4 className="font-bold text-sm uppercase tracking-wider text-white">Our Services</h4>
+                            <Target className="w-5 h-5" />
+                            <h4 className="font-bold text-sm uppercase tracking-wider text-black">Core Services</h4>
                         </div>
                         <div className="flex flex-wrap gap-2">
                             {company.services.map((service, i) => (
-                                <span key={i} className="px-3 py-1.5 border border-white/20 bg-white/5 rounded-lg text-xs font-bold text-gray-300 hover:text-black hover:bg-yellow-400 hover:border-yellow-400 transition-all duration-300 cursor-default">
+                                <span key={i} className="px-3 py-1.5 border-2 border-black bg-white rounded-lg text-xs font-bold text-black hover:bg-black hover:text-white transition-all duration-300 cursor-default shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
                                     {service}
                                 </span>
                             ))}
@@ -153,7 +157,7 @@ export default function Projects() {
                      </div>
                  </div>
                  
-                 <Globe className="absolute -bottom-6 -right-6 w-40 h-40 text-white/5 rotate-12" />
+                 <Globe className="absolute -bottom-6 -right-6 w-40 h-40 text-black/10 rotate-12" />
             </motion.div>
 
 
@@ -162,10 +166,10 @@ export default function Projects() {
 
 
         {/* Leadership & Initiatives Section */}
-        <div className="max-w-7xl mx-auto">
+        <div className="w-full mx-auto">
              <div className="flex items-center gap-4 mb-12">
                 <div className="h-1 flex-1 bg-black"></div>
-                <h3 className="text-3xl md:text-4xl font-black uppercase text-center bg-black text-white px-6 py-2 rounded-xl transform -rotate-1">
+                <h3 className="text-3xl md:text-4xl font-black uppercase text-center bg-white text-black border-2 border-black px-6 py-2 rounded-xl transform -rotate-1 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                     Leadership & Community
                 </h3>
                 <div className="h-1 flex-1 bg-black"></div>

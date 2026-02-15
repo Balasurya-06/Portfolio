@@ -1,8 +1,7 @@
 "use client"
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Menu, X } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Menu, X, ArrowUpRight } from "lucide-react"
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -22,87 +21,122 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true)
-      } else {
-        setScrolled(false)
-      }
+      setScrolled(window.scrollY > 50)
     }
 
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  const navItems = ["about", "projects", "contact"]
+  const navItems = [
+    { name: "About", id: "about" },
+    { name: "Projects", id: "projects" },
+    { name: "Honors", id: "honors-awards" },
+    { name: "Gallery", id: "gallery" }, // Changed to ID scrolling
+  ]
 
   return (
-    <motion.nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "backdrop-blur-xl bg-white/70 border-b border-gray-200 shadow-sm" : "bg-transparent"
-      }`}
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
-    >
-      <div className="container mx-auto px-6 lg:px-16 py-6 flex justify-between items-center">
-        <motion.div
-          className="text-xl font-bold text-[#1a1a1a]"
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
+    <>
+        <motion.nav
+            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out flex justify-center ${
+                scrolled ? "py-4" : "py-6"
+            }`}
+             initial={{ y: -100 }}
+             animate={{ y: 0 }}
+             transition={{ duration: 0.5 }}
         >
-          Bala Surya S
-        </motion.div>
-
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8">
-          {navItems.map((item, index) => (
-            <motion.button
-              key={item}
-              onClick={() => scrollToSection(item)}
-              className="text-gray-600 hover:text-black capitalize font-semibold transition-colors hover-target"
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+            <div 
+                className={`flex items-center justify-between transition-all duration-500 ease-in-out ${
+                    scrolled 
+                    ? "w-[90%] md:w-[70%] lg:w-[60%] bg-white/80 backdrop-blur-md border border-white/20 shadow-lg rounded-full px-6 py-3" 
+                    : "w-[90%] bg-transparent px-0 py-2"
+                }`}
             >
-              {item}
-            </motion.button>
-          ))}
-        </div>
-
-        {/* Mobile Navigation Toggle */}
-        <motion.button className="md:hidden hover-target" onClick={toggleMenu} whileTap={{ scale: 0.9 }}>
-          {isMenuOpen ? <X className="text-black" /> : <Menu className="text-black" />}
-        </motion.button>
-      </div>
-
-      {/* Mobile Navigation Menu */}
-      <AnimatePresence>
-        {isMenuOpen && (
-          <motion.div
-            className="md:hidden bg-white/95 backdrop-blur-md border-b border-gray-200"
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-          >
-            <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
-              {navItems.map((item, index) => (
-                <motion.button
-                  key={item}
-                  onClick={() => scrollToSection(item)}
-                  className="text-gray-600 hover:text-yellow-500 py-2 capitalize text-left hover-target font-medium"
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.3, delay: index * 0.1 }}
+                {/* Logo */}
+                <motion.div
+                    className="flex items-center cursor-pointer"
+                    onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                    whileHover={{ scale: 1.05 }}
                 >
-                  {item}
-                </motion.button>
-              ))}
+                    <div className="relative">
+                        <span className="font-marker text-2xl font-bold text-black z-10 relative">Bala Surya</span>
+                        <div className="absolute -bottom-1 left-0 w-full h-2 bg-yellow-400/50 -rotate-2 -z-0 rounded-sm"></div>
+                    </div>
+                </motion.div>
+
+                {/* Desktop Nav */}
+                <div className="hidden md:flex items-center gap-1 bg-white/50 rounded-full px-2 py-1 border border-white/20 backdrop-blur-sm">
+                    {navItems.map((item) => (
+                         item.href ? (
+                            <a
+                                key={item.name}
+                                href={item.href}
+                                className="px-4 py-2 text-sm font-bold text-gray-600 hover:text-black hover:bg-white hover:shadow-sm rounded-full transition-all duration-300 capitalize"
+                            >
+                                {item.name}
+                            </a>
+                         ) : (
+                            <button
+                                key={item.name}
+                                onClick={() => scrollToSection(item.id)}
+                                className="px-4 py-2 text-sm font-bold text-gray-600 hover:text-black hover:bg-white hover:shadow-sm rounded-full transition-all duration-300 capitalize"
+                            >
+                                {item.name}
+                            </button>
+                         )
+                    ))}
+                </div>
+
+                {/* CTA Button */}
+                <div className="hidden md:block">
+                     <button 
+                        onClick={() => scrollToSection("contact")}
+                        className="group flex items-center gap-2 bg-black text-white px-5 py-2.5 rounded-full font-bold text-sm hover:bg-yellow-400 hover:text-black transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5"
+                     >
+                        Let's Talk
+                        <ArrowUpRight className="w-4 h-4 group-hover:rotate-45 transition-transform duration-300" />
+                     </button>
+                </div>
+
+                {/* Mobile Menu Toggle */}
+                <button className="md:hidden p-2 text-black" onClick={toggleMenu}>
+                    {isMenuOpen ? <X /> : <Menu />}
+                </button>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.nav>
+        </motion.nav>
+
+        {/* Mobile Navigation Menu Overlay */}
+        <AnimatePresence>
+            {isMenuOpen && (
+            <motion.div
+                className="fixed inset-0 z-40 bg-white/95 backdrop-blur-xl flex flex-col items-center justify-center space-y-8 md:hidden"
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.2 }}
+            >
+                 {navItems.map((item, index) => (
+                    item.href ? (
+                        <a
+                            key={item.name}
+                            href={item.href}
+                            className="text-4xl font-black text-black hover:text-yellow-500 capitalize"
+                        >
+                            {item.name}
+                        </a>
+                    ) : (
+                        <button
+                            key={item.name}
+                            onClick={() => scrollToSection(item.id)}
+                            className="text-4xl font-black text-black hover:text-yellow-500 capitalize"
+                        >
+                            {item.name}
+                        </button>
+                    )
+                ))}
+            </motion.div>
+            )}
+        </AnimatePresence>
+    </>
   )
 }

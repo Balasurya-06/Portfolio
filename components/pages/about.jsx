@@ -3,13 +3,13 @@ import { motion } from "framer-motion"
 import { Download } from "lucide-react"
 import Education from "@/components/pages/education"
 import Skills from "@/components/pages/skills"
-import Experience from "@/components/pages/experience"
+
 import WorkTogether from "@/components/pages/work-together"
 
 export default function About() {
   return (
     <section id="about" className="py-20 bg-[#e6e6e6] text-[#1a1a1a] relative overflow-hidden">
-      <div className="container mx-auto px-6 lg:px-16">
+      <div className="w-[90%] mx-auto px-6 lg:px-16">
         
         {/* Header - HELLO */}
         <div className="flex items-center justify-center lg:justify-start mb-12">
@@ -90,9 +90,7 @@ export default function About() {
         </div>
 
         {/* Experience Section - Full Width */}
-        <div className="mt-20">
-            <Experience />
-        </div>
+
 
 
 

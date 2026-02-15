@@ -26,10 +26,10 @@ export default function Hero() {
         <Video className="w-10 h-10" />
       </motion.div>
 
-      <div className="container mx-auto px-6 lg:px-16 relative z-10 h-full flex flex-col lg:flex-row items-center">
+      <div className="w-[90%] mx-auto px-6 lg:px-16 relative z-10 h-full flex flex-col lg:flex-row items-center">
         
         {/* Left Content - Typography */}
-        <div className="flex-1 relative z-20 pt-10 lg:pt-0">
+        <div className="flex-1 relative z-20 pt-10 lg:pt-0 flex flex-col justify-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -37,25 +37,23 @@ export default function Hero() {
             className="relative"
           >
             {/* Badge */}
-            <div className="absolute -top-6 left-0 bg-yellow-400 text-black font-bold py-1 px-4 rounded-full transform -rotate-2 z-10 shadow-lg">
+            <div className="absolute -top-8 left-0 bg-yellow-400 text-black font-black text-lg py-2 px-6 rounded-full transform -rotate-2 z-10 shadow-lg border-2 border-black">
               Software Developer
             </div>
 
-            <h1 className="text-[15vw] lg:text-[180px] leading-[0.8] font-black tracking-tighter text-[#2a2a2a] relative">
+            <h1 className="text-[16vw] lg:text-[200px] leading-[0.8] font-black tracking-tighter text-[#2a2a2a] relative uppercase">
               <span className="block">PORTO</span>
               <span className="block pl-10">FOLIO<span className="text-yellow-400">.</span></span>
             </h1>
-            
-            {/* Outline Text Option */}
-             {/* <h1 className="text-[120px] font-black tracking-tighter text-transparent stroke-text">
-              FOLIO
-            </h1> */}
 
-            <div className="mt-8 flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full border-2 border-black flex items-center justify-center">
-                 <ArrowRight className="w-6 h-6" />
+            <div className="mt-10 flex items-center gap-6">
+              <div className="w-16 h-16 rounded-full bg-black text-white flex items-center justify-center hover:scale-110 transition-transform duration-300">
+                 <ArrowRight className="w-8 h-8" />
               </div>
-              <p className="font-bold text-lg">Bala Surya</p>
+              <div>
+                  <p className="font-black text-2xl uppercase tracking-wide">Bala Surya</p>
+                  <p className="text-gray-500 font-medium">Founder @ Vygron</p>
+              </div>
             </div>
           </motion.div>
         </div>
@@ -67,9 +65,11 @@ export default function Hero() {
              <div className="absolute top-10 right-0 w-3/4 h-3/4 bg-yellow-400 rounded-[3rem] -z-10" />
              <div className="absolute top-20 right-[-20px] w-full h-full border-2 border-gray-400 rounded-[3rem] -z-20" />
              
-             {/* Circular text or badge */}
-             <div className="absolute -top-10 -right-10 w-24 h-24 bg-black rounded-full flex items-center justify-center text-white text-xs text-center p-2 z-20 animate-spin-slow">
-                Selected Best Developer 2024
+             {/* Star Badge */}
+             <div className="absolute -top-14 -right-14 w-24 h-24 z-20 flex items-center justify-center animate-spin-slow">
+                <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full text-yellow-400 drop-shadow-md">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
              </div>
 
              <motion.img
