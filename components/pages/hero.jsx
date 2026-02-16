@@ -7,8 +7,8 @@ export default function Hero() {
   return (
     <section className="relative min-h-[90vh] bg-[#e6e6e6] text-[#1a1a1a] flex flex-col justify-center overflow-hidden pt-20">
       {/* Background Elements */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-yellow-400 rounded-bl-full z-0 opacity-20" />
-      <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-gray-200 rounded-tr-full z-0" />
+      <div className="absolute top-0 right-0 w-[300px] lg:w-[500px] h-[300px] lg:h-[500px] bg-yellow-400 rounded-bl-full z-0 opacity-20" />
+      <div className="absolute bottom-0 left-0 w-[200px] lg:w-[300px] h-[200px] lg:h-[300px] bg-gray-200 rounded-tr-full z-0" />
       
       {/* Decorative Circles/Icons */}
       <motion.div 
@@ -41,9 +41,9 @@ export default function Hero() {
               Software Developer
             </div>
 
-            <h1 className="text-[16vw] lg:text-[200px] leading-[0.8] font-black tracking-tighter text-[#2a2a2a] relative uppercase">
+            <h1 className="text-[14vw] lg:text-[200px] leading-[0.9] lg:leading-[0.8] font-black tracking-tighter text-[#2a2a2a] relative uppercase">
               <span className="block">PORTO</span>
-              <span className="block pl-10">FOLIO<span className="text-yellow-400">.</span></span>
+              <span className="block pl-4 lg:pl-10">FOLIO<span className="text-yellow-400">.</span></span>
             </h1>
 
             <div className="mt-10 flex items-center gap-6">
@@ -60,7 +60,7 @@ export default function Hero() {
 
         {/* Right Content - Image */}
         <div className="flex-1 relative h-full flex items-end justify-end mt-10 lg:mt-0">
-          <div className="relative w-full max-w-[500px] aspect-[4/5]">
+          <div className="relative w-full max-w-[300px] lg:max-w-[500px] aspect-[4/5]">
              {/* Yellow Background Shape */}
              <div className="absolute top-10 right-0 w-3/4 h-3/4 bg-yellow-400 rounded-[3rem] -z-10" />
              <div className="absolute top-20 right-[-20px] w-full h-full border-2 border-gray-400 rounded-[3rem] -z-20" />

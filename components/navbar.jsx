@@ -120,7 +120,7 @@ export default function Navbar() {
                         <a
                             key={item.name}
                             href={item.href}
-                            className="text-4xl font-black text-black hover:text-yellow-500 capitalize"
+                            className="text-3xl font-black text-black hover:text-yellow-500 capitalize"
                         >
                             {item.name}
                         </a>
@@ -128,12 +128,18 @@ export default function Navbar() {
                         <button
                             key={item.name}
                             onClick={() => scrollToSection(item.id)}
-                            className="text-4xl font-black text-black hover:text-yellow-500 capitalize"
+                            className="text-3xl font-black text-black hover:text-yellow-500 capitalize"
                         >
                             {item.name}
                         </button>
                     )
                 ))}
+                <button
+                    onClick={() => scrollToSection("contact")}
+                    className="text-3xl font-black text-black hover:text-yellow-500 capitalize"
+                >
+                    Let's Talk
+                </button>
             </motion.div>
             )}
         </AnimatePresence>

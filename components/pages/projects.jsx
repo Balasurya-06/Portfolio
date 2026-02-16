@@ -64,12 +64,12 @@ export default function Projects() {
             viewport={{ once: true }}
             className="flex flex-col items-center justify-center mb-20"
         >
-            <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-4 text-center">
+            <h2 className="text-[6vw] sm:text-5xl md:text-7xl font-black uppercase tracking-tighter mb-4 text-center">
                 ENTREPRENEURIAL
             </h2>
             <div className="relative inline-block">
                 <div className="absolute inset-0 bg-yellow-400 transform -rotate-2 rounded-lg translate-y-2"></div>
-                <h2 className="relative text-5xl md:text-7xl font-black uppercase tracking-tighter text-black px-4 bg-white border-4 border-black rounded-lg transform rotate-2">
+                <h2 className="relative text-[10vw] sm:text-6xl md:text-7xl font-black uppercase tracking-tighter text-black px-4 bg-white border-4 border-black rounded-lg transform rotate-2">
                     VENTURES
                 </h2>
             </div>
@@ -83,7 +83,7 @@ export default function Projects() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="md:col-span-8 bg-white border-4 border-black rounded-[2rem] p-8 md:p-12 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] transition-all duration-300 relative overflow-hidden group"
+                className="md:col-span-8 bg-white border-4 border-black rounded-[2rem] p-6 md:p-12 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] transition-all duration-300 relative overflow-hidden group"
             >
                 {/* Background Pattern */}
                 <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, #000 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
@@ -169,7 +169,7 @@ export default function Projects() {
         <div className="w-full mx-auto">
              <div className="flex items-center gap-4 mb-12">
                 <div className="h-1 flex-1 bg-black"></div>
-                <h3 className="text-3xl md:text-4xl font-black uppercase text-center bg-white text-black border-2 border-black px-6 py-2 rounded-xl transform -rotate-1 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                <h3 className="text-xl md:text-4xl font-black uppercase text-center bg-white text-black border-2 border-black px-6 py-2 rounded-xl transform -rotate-1 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                     Leadership & Community
                 </h3>
                 <div className="h-1 flex-1 bg-black"></div>

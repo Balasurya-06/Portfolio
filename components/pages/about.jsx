@@ -14,23 +14,22 @@ export default function About() {
         {/* Header - HELLO */}
         <div className="flex items-center justify-center lg:justify-start mb-12">
             <span className="text-yellow-400 text-6xl mr-4">"</span>
-            <h2 className="text-6xl font-black uppercase tracking-wider">Hello.</h2>
+            <h2 className="text-4xl lg:text-6xl font-black uppercase tracking-wider">Hello.</h2>
         </div>
 
         <div className="grid lg:grid-cols-12 gap-12">
           
-          {/* Left Side: Photo (Mobile: Top, Desktop: Left Col 4) */}
           {/* Left Side: Photo & Resume (Mobile: Top, Desktop: Left Col 4) */}
           <div className="lg:col-span-4 flex justify-center h-fit">
-            <div className="sticky top-24 w-full max-w-sm space-y-10">
+            <div className="lg:sticky top-24 w-full max-w-sm space-y-10">
                 
                 {/* Photo */}
-                <div className="relative hidden lg:block">
+                <div className="relative block">
                     <div className="absolute inset-0 bg-yellow-400 rounded-[2rem] transform translate-x-4 translate-y-4"></div>
                     <img 
                         src="/surya-founder.jpg" 
                         alt="Bala Surya – Founder of Vygron Technology in Paruvai, Palladam, Tirupur" 
-                        className="relative w-full h-[450px] object-cover rounded-[2rem] grayscale z-10 shadow-xl"
+                        className="relative w-full h-[300px] lg:h-[450px] object-cover rounded-[2rem] grayscale z-10 shadow-xl"
                     />
                 </div>
 
