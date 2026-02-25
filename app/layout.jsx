@@ -19,20 +19,29 @@ export const metadata = {
 
   /* ── Titles ── */
   title: {
-    default:  "Bala Surya S | Founder of Vygron & AI Specialist | Top Full Stack Developer in Tirupur",
-    template: "%s | Bala Surya S – Full Stack Developer & AI Specialist",
+    default:  "Bala Surya | Full Stack Developer, AI Specialist, Founder of Vygron",
+    template: "%s | Bala Surya – Full Stack Developer & AI Specialist",
   },
 
   /* ── Description ── */
   description:
-    "Bala Surya S (Balasurya Suresh) is the Founder of Vygron Technology and a top-rated Full Stack Developer & AI Specialist based in Paruvai, Palladam, Tirupur, Tamil Nadu, India. Expert in Next.js, React, Node.js, Agentic AI, LLM Integration, and Scalable Web & Mobile Solutions. Delivering high-performance digital products for startups and enterprises. View portfolio, projects, and resume.",
+    "Bala Surya is a top Full Stack Developer, AI Specialist, and Founder of Vygron Technology based in Tirupur, Tamil Nadu, India. Expert in Next.js, React, Node.js, Agentic AI, LLM Integration, and scalable web/mobile solutions. Explore portfolio, projects, and achievements.",
 
   /* ── Keywords ── */
   keywords: [
     /* ── Name & Personal Branding ─────────────────────────── */
     "Bala Surya", "Balasurya", "Balasurya Suresh", "Bala Surya S", "S Bala Surya",
+    "Surya Suresh", "Surya Suresh Vygron", "Surya Suresh KAHE", "Surya Suresh Paruvai", "Surya Suresh Palladam",
+    "Surya Suresh Tirupur", "Surya Suresh Portfolio", "surya-suresh.me", "balasurya.me",
     "Bala Surya Vygron", "Balasurya KAHE", "Bala Surya Paruvai", "Bala Surya Palladam",
     "Bala Surya Tirupur", "Bala Surya Portfolio", "balasurya.me",
+    "Balasurya Suresh Full Stack Developer", "Balasurya Suresh AI Specialist", "Surya Suresh Full Stack Developer", "Surya Suresh AI Specialist",
+    "Balasurya Suresh Software Architect", "Surya Suresh Software Architect", "Balasurya Suresh Web Developer", "Surya Suresh Web Developer",
+    "Balasurya Suresh Next.js", "Surya Suresh Next.js", "Balasurya Suresh React.js", "Surya Suresh React.js",
+    "Balasurya Suresh Node.js", "Surya Suresh Node.js", "Balasurya Suresh Python", "Surya Suresh Python",
+    "Balasurya Suresh AI", "Surya Suresh AI", "Balasurya Suresh Agentic AI", "Surya Suresh Agentic AI",
+    "Balasurya Suresh LLM", "Surya Suresh LLM", "Balasurya Suresh Tirupur", "Surya Suresh Tirupur",
+    "Balasurya Suresh Portfolio", "Surya Suresh Portfolio",
 
     /* ── Social Profiles ───────────────────────────────────── */
     "Balasurya GitHub", "Balasurya-06 GitHub", "github.com/Balasurya-06",
@@ -97,8 +106,12 @@ export const metadata = {
   ],
 
   /* ── Authors & Publisher ── */
-  authors:     [{ name: "Bala Surya S", url: SITE_URL }],
-  creator:     "Bala Surya S",
+  authors:     [
+    { name: "Bala Surya S", url: SITE_URL },
+    { name: "Balasurya Suresh", url: SITE_URL },
+    { name: "Surya Suresh", url: SITE_URL }
+  ],
+  creator:     "Bala Surya S, Balasurya Suresh, Surya Suresh",
   publisher:   "Vygron Technology",
   category:    "Technology, Software Development, Artificial Intelligence",
   generator:   "Next.js",
@@ -131,9 +144,9 @@ export const metadata = {
     type:        "profile",
     locale:      "en_IN",
     url:         SITE_URL,
-    title:       "Bala Surya S | Full Stack Developer & AI Specialist – Vygron Technology",
+    title:       "Bala Surya | Full Stack Developer, AI Specialist, Founder of Vygron",
     description:
-      "Official portfolio of Bala Surya S — Founder of Vygron Technology, Full Stack Developer, and AI Specialist from Tirupur, Tamil Nadu. Explore projects, skills, and get in touch.",
+      "Bala Surya is a top Full Stack Developer, AI Specialist, and Founder of Vygron Technology based in Tirupur, Tamil Nadu, India. Explore portfolio, projects, and achievements.",
     siteName: "Bala Surya Portfolio",
     firstName: "Bala Surya",
     lastName:  "S",
@@ -144,14 +157,14 @@ export const metadata = {
         url:    OG_IMAGE,
         width:  1200,
         height: 630,
-        alt:    "Bala Surya S – Founder of Vygron Technology | Full Stack Developer & AI Specialist",
+        alt:    "Bala Surya – Founder of Vygron Technology | Full Stack Developer & AI Specialist",
         type:   "image/jpeg",
       },
       {
         url:    `${SITE_URL}/surya4.png`,
         width:  800,
         height: 800,
-        alt:    "Bala Surya S – AI Specialist & Software Architect",
+        alt:    "Bala Surya – AI Specialist & Software Architect",
         type:   "image/png",
       },
     ],
@@ -162,13 +175,13 @@ export const metadata = {
     card:        "summary_large_image",
     site:        "@balasurya_06",
     creator:     "@balasurya_06",
-    title:       "Bala Surya S | Full Stack Developer & AI Specialist",
+    title:       "Bala Surya | Full Stack Developer, AI Specialist, Founder of Vygron",
     description:
-      "Founder of Vygron Technology. Expert in Next.js, Agentic AI & Scalable Web Solutions. Based in Tirupur, Tamil Nadu.",
+      "Bala Surya is a top Full Stack Developer, AI Specialist, and Founder of Vygron Technology based in Tirupur, Tamil Nadu, India.",
     images: [
       {
         url:   OG_IMAGE,
-        alt:   "Bala Surya S – Full Stack Developer & AI Specialist | Founder Vygron Technology",
+        alt:   "Bala Surya – Full Stack Developer & AI Specialist | Founder Vygron Technology",
         width: 1200,
         height: 630,
       },
