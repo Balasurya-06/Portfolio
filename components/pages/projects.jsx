@@ -99,8 +99,8 @@ export default function Projects() {
                         <img src={company.logo} alt="Vygron Logo" className="w-full h-full object-contain" />
                     </div>
                     <div className="space-y-4 text-center md:text-left flex-1">
-                        <div>
-                            <h3 className="text-4xl md:text-6xl font-black uppercase leading-none tracking-tighter mb-2">{company.name}</h3>
+                        <div className="flex flex-col items-center md:items-start">
+                            <img src={company.logo} alt="Vygron Logo" className="w-56 h-28 object-contain mb-2 drop-shadow-lg" />
                             <p className="text-xl font-bold text-gray-500 bg-yellow-100 inline-block px-2 transform -rotate-1">{company.tagline}</p>
                         </div>
                         <p className="text-lg font-medium leading-relaxed">
