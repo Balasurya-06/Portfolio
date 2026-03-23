@@ -87,7 +87,7 @@ export default function Hero() {
       
       {/* Side Text */}
       <div className="hidden lg:block absolute right-10 top-1/2 -translate-y-1/2 rotate-90 origin-right text-xs font-mono text-gray-500 tracking-widest">
-        RANDY © 2025
+        Surya© 2026
       </div>
     </section>
   )

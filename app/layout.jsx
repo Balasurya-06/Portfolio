@@ -12,6 +12,9 @@ const LINKEDIN  = "https://www.linkedin.com/in/balasurya06/"
 const EMAIL     = "mailto:balasurya9597@gmail.com"
 const SITE_URL  = "https://balasurya.me"
 const OG_IMAGE  = `${SITE_URL}/surya-founder.jpg`
+const GOOGLE_SITE_VERIFICATION = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+const BING_SITE_VERIFICATION = process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION
+const YANDEX_SITE_VERIFICATION = process.env.NEXT_PUBLIC_YANDEX_SITE_VERIFICATION
 
 /* ─── METADATA ─────────────────────────────────────────────────── */
 export const metadata = {
@@ -26,6 +29,9 @@ export const metadata = {
   /* ── Description ── */
   description:
     "Bala Surya is a top Full Stack Developer, AI Specialist, and Founder of Vygron Technology based in Tirupur, Tamil Nadu, India. Expert in Next.js, React, Node.js, Agentic AI, LLM Integration, and scalable web/mobile solutions. Explore portfolio, projects, and achievements.",
+
+  abstract:
+    "Official portfolio of Bala Surya S (Balasurya), Full Stack Developer and AI Specialist from Tirupur, Tamil Nadu, India.",
 
   /* ── Keywords ── */
   keywords: [
@@ -136,13 +142,13 @@ export const metadata = {
   /* ── Canonical & Alternates ── */
   alternates: {
     canonical: SITE_URL,
-    languages: { "en-IN": `${SITE_URL}/en-IN`, "en-US": `${SITE_URL}/en-US` },
   },
 
   /* ── Open Graph ── */
   openGraph: {
     type:        "profile",
     locale:      "en_IN",
+    alternateLocale: ["en_US"],
     url:         SITE_URL,
     title:       "Bala Surya | Full Stack Developer, AI Specialist, Founder of Vygron",
     description:
@@ -207,9 +213,16 @@ export const metadata = {
 
   /* ── Verification ── */
   verification: {
-    google:  "verification_token",           // Replace with Google Search Console token
-    yandex:  "yandex_verification_token",    // Replace with Yandex token
-    bing:    "bing_verification_token",      // Replace with Bing Webmaster token
+    google:  GOOGLE_SITE_VERIFICATION,
+    yandex:  YANDEX_SITE_VERIFICATION,
+    bing:    BING_SITE_VERIFICATION,
+  },
+
+  other: {
+    subject: "Bala Surya Portfolio",
+    topic: "Full Stack Development and AI Engineering",
+    url: SITE_URL,
+    "profile:username": "balasurya06",
   },
 
   /* ── Extra Meta ── */
@@ -258,12 +271,16 @@ export default function RootLayout({ children }) {
         <meta name="coverage"     content="Worldwide" />
         <meta name="distribution" content="Global" />
         <meta name="classification" content="Technology, Software Development, AI" />
+        <meta name="subject" content="Bala Surya Portfolio" />
+        <meta name="topic" content="Full Stack Development and AI Engineering" />
+        <meta name="url" content="https://balasurya.me" />
 
         {/* ── Social Profile Links ── */}
         <link rel="me" href="https://github.com/Balasurya-06" />
         <link rel="me" href="https://www.linkedin.com/in/balasurya06/" />
         <link rel="me" href="https://www.instagram.com/surya.007._" />
         <link rel="me" href="mailto:balasurya9597@gmail.com" />
+        <link rel="author" href="https://balasurya.me" />
 
         {/* ── Profile meta ── */}
         <meta name="author"       content="Bala Surya S" />
@@ -303,6 +320,8 @@ export default function RootLayout({ children }) {
                   "@id":       `${SITE_URL}/#person`,
                   "name":      "Bala Surya S",
                   "alternateName": ["Balasurya", "Balasurya Suresh", "S Bala Surya"],
+                  "identifier": "Balasurya",
+                  "disambiguatingDescription": "Balasurya - Full Stack Developer, AI Specialist, and Founder of Vygron Technology",
                   "url":       SITE_URL,
                   "image": {
                     "@type":       "ImageObject",
@@ -452,7 +471,7 @@ export default function RootLayout({ children }) {
                   "about":         { "@id": `${SITE_URL}/#person` },
                   "mainEntity":    { "@id": `${SITE_URL}/#person` },
                   "inLanguage":    "en-IN",
-                  "dateModified":  "2026-02-23",
+                  "dateModified":  "2026-03-23",
                   "image": {
                     "@type":   "ImageObject",
                     "url":      OG_IMAGE,

@@ -12,7 +12,7 @@ export default function Footer() {
   const socialLinks = [
     { icon: Github, href: "https://github.com/Balasurya-06", label: "GitHub", color: "hover:bg-[#333] hover:text-white" },
     { icon: Linkedin, href: "https://www.linkedin.com/in/balasurya-s-841b5225a/", label: "LinkedIn", color: "hover:bg-[#0077b5] hover:text-white" },
-    { icon: Instagram, href: "https://www.instagram.com/_surya_x.06", label: "Instagram", color: "hover:bg-[#E1306C] hover:text-white" },
+    { icon: Instagram, href: "https://www.instagram.com/surya.007._", label: "Instagram", color: "hover:bg-[#E1306C] hover:text-white" },
   ]
 
   const footerLinks = [
