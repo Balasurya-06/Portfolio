@@ -7,14 +7,16 @@ export default function sitemap() {
     {
       url: SITE_URL,
       lastModified,
-      changeFrequency: "weekly",
+      changeFrequency: "daily",
       priority: 1,
+      images: [`${SITE_URL}/surya-founder.jpg`],
     },
     {
       url: `${SITE_URL}/gallery`,
       lastModified,
-      changeFrequency: "monthly",
-      priority: 0.7,
+      changeFrequency: "weekly",
+      priority: 0.85,
+      images: [`${SITE_URL}/surya-founder.jpg`],
     },
   ]
 }
