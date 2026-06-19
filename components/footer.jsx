@@ -1,6 +1,7 @@
 "use client"
 import { motion } from "framer-motion"
-import { Github, Linkedin, Instagram, Twitter, ArrowUp, Send, Heart } from "lucide-react"
+import { Github, Linkedin, Instagram, ArrowUp, Sparkles, Rocket, Code2 } from "lucide-react"
+import Image from "next/image"
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -10,131 +11,110 @@ export default function Footer() {
   }
 
   const socialLinks = [
-    { icon: Github, href: "https://github.com/Balasurya-06", label: "GitHub", color: "hover:bg-[#333] hover:text-white" },
-    { icon: Linkedin, href: "https://www.linkedin.com/in/balasurya-s-841b5225a/", label: "LinkedIn", color: "hover:bg-[#0077b5] hover:text-white" },
-    { icon: Instagram, href: "https://www.instagram.com/surya.007._", label: "Instagram", color: "hover:bg-[#E1306C] hover:text-white" },
+    { icon: Github, href: "https://github.com/Balasurya-06", label: "GitHub" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/balasurya06/", label: "LinkedIn" },
+    { icon: Instagram, href: "https://www.instagram.com/surya.007._", label: "Instagram" },
   ]
 
-  const footerLinks = [
+  const quickLinks = [
     { name: "Home", href: "/" },
     { name: "About", href: "/#about" },
     { name: "Projects", href: "/#projects" },
-    { name: "Gallery", href: "/gallery" },
+    { name: "Contact", href: "/#contact" },
   ]
 
   return (
-    <footer className="relative bg-black text-white overflow-hidden border-t-8 border-yellow-400">
+    <footer className="relative bg-black text-white overflow-hidden">
       
-      {/* Marquee Section */}
-      <div className="bg-yellow-400 py-4 overflow-hidden border-b-4 border-black rotate-1 scale-105 -translate-y-2 transform">
-        <motion.div 
-          className="whitespace-nowrap flex gap-10 text-black font-black text-2xl uppercase tracking-widest"
-          animate={{ x: [0, -1000] }}
-          transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
-        >
-          {Array(20).fill("Let's Build Something Amazing • ").map((text, i) => (
-             <span key={i}>{text}</span>
-          ))}
-        </motion.div>
-      </div>
-
-      <div className="w-[90%] mx-auto px-6 lg:px-16 py-20 relative z-10">
-        <div className="grid md:grid-cols-2 lg:grid-cols-12 gap-12 mb-20">
+      {/* Main Footer Content */}
+      <div className="relative">
+        
+        {/* Bottom Navigation & Info */}
+        <div className="bg-black border-t border-white/10 py-12">
+          <div className="w-[90%] mx-auto px-6 lg:px-16">
             
-            {/* Brand Section */}
-            <div className="lg:col-span-5 space-y-8">
-                <div className="inline-block relative">
-                     <span className="absolute -inset-2 bg-yellow-400 transform -rotate-2 rounded-lg"></span>
-                     <h2 className="relative text-5xl md:text-7xl font-black uppercase tracking-tighter text-black bg-white px-6 py-2 border-4 border-black rounded-lg transform rotate-2">
-                        Bala Surya
-                     </h2>
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              
+              {/* Logo/Brand with Photo */}
+              <div className="space-y-4">
+                <div className="flex items-center gap-6">
+                  {/* Clean Photo - Larger and more visible */}
+                  <div className="w-32 h-32 rounded-3xl overflow-hidden flex-shrink-0">
+                    <Image
+                      src="/surya.png"
+                      alt="Bala Surya"
+                      width={128}
+                      height={128}
+                      // className="object-cover w-full h-full"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="text-3xl font-black text-white">Bala Surya</h3>
+                    <p className="text-base text-gray-400 font-medium">Founder & Technology Leader</p>
+                  </div>
                 </div>
-                <p className="text-gray-400 text-lg leading-relaxed max-w-sm pt-4">
-                    Full Stack Developer & Entrepreneur from <span className="text-white font-bold">Paruvai, Palladam</span>. 
-                    Building digital experiences that merge creativity with code.
-                </p>
-                
-                <div className="flex gap-4 pt-4">
-                    {socialLinks.map((social, idx) => (
-                         <motion.a
-                            key={idx}
-                            href={social.href}
-                            target="_blank"
-                            rel="noreferrer"
-                            whileHover={{ y: -5, rotate: 5, scale: 1.1 }}
-                            className={`w-14 h-14 bg-white text-black border-4 border-black rounded-xl flex items-center justify-center transition-all shadow-[4px_4px_0px_0px_rgba(255,255,255,0.5)] ${social.color}`}
-                         >
-                             <social.icon size={24} className="stroke-[2.5]" />
-                         </motion.a>
-                    ))}
+              </div>
+
+              {/* Quick Links */}
+              <div>
+                <h4 className="text-sm font-black uppercase text-gray-400 mb-4 tracking-wider">Quick Links</h4>
+                <ul className="space-y-2">
+                  {quickLinks.map((link, idx) => (
+                    <li key={idx}>
+                      <a 
+                        href={link.href}
+                        className="text-white hover:text-yellow-400 transition-colors font-medium text-sm flex items-center gap-2 group"
+                      >
+                        <span className="w-1.5 h-1.5 bg-yellow-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                        {link.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Social Links */}
+              <div>
+                <h4 className="text-sm font-black uppercase text-gray-400 mb-4 tracking-wider">Connect</h4>
+                <div className="flex gap-3">
+                  {socialLinks.map((social, idx) => (
+                    <motion.a
+                      key={idx}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ y: -3, scale: 1.1 }}
+                      className="w-10 h-10 bg-white/10 hover:bg-white border-2 border-white/20 hover:border-white rounded-lg flex items-center justify-center transition-all group"
+                      aria-label={social.label}
+                    >
+                      <social.icon className="w-5 h-5 text-white group-hover:text-black transition-colors" />
+                    </motion.a>
+                  ))}
                 </div>
+              </div>
+
             </div>
 
-            {/* Links Section */}
-            <div className="lg:col-span-3 lg:col-start-7 space-y-8">
-                 <h3 className="text-3xl font-black uppercase text-yellow-400 relative inline-block">
-                    Menu
-                    <span className="absolute -bottom-2 left-0 w-full h-1 bg-white rounded-full"></span>
-                 </h3>
-                 <ul className="space-y-4">
-                    {footerLinks.map((link, idx) => (
-                        <li key={idx}>
-                            <a href={link.href} className="text-xl font-bold text-gray-300 hover:text-yellow-400 hover:pl-2 transition-all flex items-center gap-3 group">
-                                <span className="w-2 h-2 bg-yellow-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                                {link.name}
-                            </a>
-                        </li>
-                    ))}
-                 </ul>
-            </div>
-
-            {/* Newsletter / Contact */}
-            <div className="lg:col-span-4 space-y-8">
-                <h3 className="text-3xl font-black uppercase text-yellow-400 relative inline-block">
-                    Let's Talk
-                    <span className="absolute -bottom-2 left-0 w-full h-1 bg-white rounded-full"></span>
-                </h3>
-                <p className="text-gray-400 text-lg">
-                    Have an idea or just want to say hi? Drop me a message!
-                </p>
-                <div className="flex flex-col gap-4">
-                     <a 
-                        href="mailto:balasurya9597@gmail.com"
-                        className="bg-white text-black border-4 border-black rounded-xl px-6 py-4 font-black uppercase tracking-wider hover:bg-yellow-400 hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,0.5)] transition-all flex items-center justify-between group"
-                     >
-                        Say Hello
-                        <Send className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                     </a>
-                </div>
-            </div>
-
-        </div>
-
-        {/* Bottom Bar */}
-        <div className="border-t-2 border-dashed border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
-             <div className="flex flex-col md:flex-row items-center gap-2 text-gray-500 font-medium text-sm">
-                <p>&copy; {currentYear} Bala Surya. All rights reserved.</p>
-                <span className="hidden md:inline">•</span>
-                <div className="flex items-center gap-1">
-                    {/* <span>Made with</span>
-                    <Heart size={14} className="text-red-500 fill-red-500 animate-pulse" />
-                    <span>using Next.js</span> */}
-                </div>
-             </div>
-
-             <motion.button 
+            {/* Copyright Bar */}
+            <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+              <p className="text-gray-400 text-sm">
+                © Copyright {currentYear} Bala Surya. All rights reserved.
+              </p>
+              
+              <motion.button
                 onClick={scrollToTop}
-                whileHover={{ y: -5 }}
-                className="flex items-center gap-2 bg-yellow-400 text-black px-4 py-2 rounded-lg font-black uppercase tracking-wider text-sm border-2 border-black shadow-[2px_2px_0px_0px_rgba(255,255,255,0.8)] hover:shadow-none hover:translate-y-[2px] transition-all"
-             >
-                Back to Top <ArrowUp size={16} />
-             </motion.button>
+                whileHover={{ y: -3 }}
+                className="flex items-center gap-2 bg-white/10 hover:bg-yellow-400 border-2 border-white/20 hover:border-yellow-400 px-4 py-2 rounded-lg text-white hover:text-black transition-all font-bold text-sm"
+              >
+                Back to Top
+                <ArrowUp className="w-4 h-4" />
+              </motion.button>
+            </div>
+
+          </div>
         </div>
+
       </div>
-      
-      {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-yellow-400/10 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
-      <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-blue-500/10 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
 
     </footer>
   )

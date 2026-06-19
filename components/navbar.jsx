@@ -32,7 +32,8 @@ export default function Navbar() {
     { name: "About", id: "about" },
     { name: "Projects", id: "projects" },
     { name: "Honors", id: "honors-awards" },
-    { name: "Gallery", id: "gallery" }, // Changed to ID scrolling
+    { name: "Career Fit", id: "career-fit" },
+    { name: "Gallery", id: "gallery" },
   ]
 
   return (

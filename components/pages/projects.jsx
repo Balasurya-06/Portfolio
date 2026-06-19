@@ -6,19 +6,19 @@ import { Button } from "@/components/ui/button"
 export default function Projects() {
   const company = {
       name: "Vygron",
-      tagline: "Innovating Digital Solutions",
-      description: "Building next-gen Web, Mobile & AI Solutions.",
+      tagline: "Startup Leadership & Technology Innovation",
+      description: "Led project delivery, stakeholder management, and cross-functional teams while building AI-powered and software-based solutions.",
       role: "Founder & CEO",
       founded: "2024",
       logo: "/vygron.png",
       website: "https://www.vygron.co.in/",
       services: [
+        "Project Management",
+        "Business Operations",
+        "AI Automation",
         "Web Development",
-        "Mobile Apps",
-        "AI/ML Solutions",
-        "Branding",
-        "UI/UX Design",
-        "Digital Marketing"
+        "Stakeholder Coordination",
+        "Strategic Planning"
       ],
       technologies: ["React", "Node.js", "Python", "AWS", "MongoDB"],
     }
@@ -136,16 +136,16 @@ export default function Projects() {
                  <div className="relative z-10">
                      <div className="mb-8">
                         <div className="inline-block px-3 py-1 bg-black text-white text-xs font-bold uppercase rounded-full mb-4">
-                            Global Impact
+                            Leadership & Operations
                         </div>
-                        <h3 className="text-4xl font-black text-black leading-tight">Digital Solutions<span className="text-white">.</span></h3>
-                        <p className="text-black font-bold mt-2 leading-relaxed border-l-4 border-black pl-4">Transforming businesses with scalable technologies.</p>
+                        <h3 className="text-4xl font-black text-black leading-tight">Startup Excellence<span className="text-white">.</span></h3>
+                        <p className="text-black font-bold mt-2 leading-relaxed border-l-4 border-black pl-4">Combining technology, leadership, and business execution to deliver impact.</p>
                      </div>
 
                      <div>
                         <div className="flex items-center gap-2 mb-4">
                             <Target className="w-5 h-5" />
-                            <h4 className="font-bold text-sm uppercase tracking-wider text-black">Core Services</h4>
+                            <h4 className="font-bold text-sm uppercase tracking-wider text-black">Core Expertise</h4>
                         </div>
                         <div className="flex flex-wrap gap-2">
                             {company.services.map((service, i) => (

@@ -3,15 +3,16 @@ import { useEffect } from "react"
 import { motion } from "framer-motion"
 import Hero from "@/components/pages/hero"
 import About from "@/components/pages/about"
+import KeyAchievements from "@/components/pages/key-achievements"
 
 import Projects from "@/components/pages/projects"
 import Contact from "@/components/pages/contact"
 import Footer from "@/components/footer"
 import CustomCursor from "@/components/custom-cursor"
 
-import WorkTogether from "@/components/pages/work-together"
 import HonorsAwards from "@/components/pages/honors-awards"
 import OfficialPartners from "@/components/pages/official-partners"
+import CareerFit from "@/components/pages/career-fit"
 import GalleryPage from "@/components/pages/gallery"
 
 export default function HomePage() {
@@ -56,6 +57,15 @@ export default function HomePage() {
             <About />
           </motion.div>
 
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={sectionVariants}
+          >
+            <KeyAchievements />
+          </motion.div>
+
 
 
           {/* Existing Sections below the main "Image Match" content */}
@@ -87,6 +97,15 @@ export default function HomePage() {
             <OfficialPartners />
           </motion.div>
 
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={sectionVariants}
+          >
+            <CareerFit />
+          </motion.div>
+
           {/* New Gallery Section directly in Home Page */}
            <motion.div
             id="gallery"
@@ -98,14 +117,15 @@ export default function HomePage() {
             <GalleryPage />
           </motion.div>
 
-           <motion.div
+          {/* Contact Section */}
+          <motion.div
+            id="contact"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
             variants={sectionVariants}
-            className="w-[90%] mx-auto px-6 lg:px-16 mb-20 relative z-20"
           >
-            <WorkTogether />
+            <Contact />
           </motion.div>
 
         </main>

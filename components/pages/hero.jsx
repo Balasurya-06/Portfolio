@@ -73,7 +73,7 @@ export default function Hero() {
              </div>
 
              <motion.img
-               src="/surya-founder.jpg"
+               src="/red-blazer.png"
                alt="Bala Surya – Founder of Vygron Technology in Paruvai, Palladam, Tirupur"
                className="w-full h-full object-cover rounded-[2rem] grayscale hover:grayscale-0 transition-all duration-500"
                initial={{ opacity: 0, y: 50 }}

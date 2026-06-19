@@ -23,7 +23,7 @@ export default function About() {
             <div className="relative w-full max-w-sm sticky top-24">
                 <div className="absolute inset-0 bg-yellow-400 rounded-[2rem] transform translate-x-4 translate-y-4"></div>
                 <img 
-                    src="/surya-founder.jpg" 
+                    src="/red-blazer.png" 
                     alt="Bala Surya" 
                     className="relative w-full h-[450px] object-cover rounded-[2rem] grayscale z-10 shadow-xl"
                 />

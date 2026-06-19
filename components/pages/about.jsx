@@ -27,7 +27,7 @@ export default function About() {
                 <div className="relative block">
                     <div className="absolute inset-0 bg-yellow-400 rounded-[2rem] transform translate-x-4 translate-y-4"></div>
                     <img 
-                        src="/surya-founder.jpg" 
+                        src="/red-blazer.png" 
                         alt="Bala Surya – Founder of Vygron Technology in Paruvai, Palladam, Tirupur" 
                         className="relative w-full h-[300px] lg:h-[450px] object-cover rounded-[2rem] grayscale z-10 shadow-xl"
                     />
@@ -36,8 +36,8 @@ export default function About() {
                 {/* Download Resume Button */}
                 <div className="flex justify-center">
                      <a 
-                        href="/resume.pdf" 
-                        download="Bala_Surya_Resume.pdf"
+                        href="/Balasurya_cv.pdf" 
+                        download="Bala_Surya_Balasurya_cv.pdf"
                         className="inline-flex items-center gap-3 bg-yellow-400 text-black border-2 border-black px-8 py-3 font-black text-xl uppercase tracking-wider transform -rotate-2 hover:rotate-0 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all duration-300"
                     >
                         <Download className="w-6 h-6" />
@@ -58,20 +58,18 @@ export default function About() {
                viewport={{ once: true }}
              >
                  <p className="text-lg leading-relaxed text-gray-800 mb-6">
-                    I'm <span className="font-bold text-black">Bala Surya</span>, a passionate Full Stack Developer, Hackathon Leader, and IEEE Vice Chairperson from <span className="font-semibold">Paruvai, Palladam, Tirupur, Tamil Nadu</span>. 
-                    I specialize in building production-ready solutions using <span className="font-semibold">Next.js, MERN Stack, and Agentic AI</span>. 
-                    Currently, I lead <span className="font-bold text-black">Vygron Technology</span>, focusing on AI-powered automation and event-tech platforms tailored for startups and institutions in South India.
+                    I'm <span className="font-bold text-black">Bala Surya</span>, <span className="font-bold text-black">Founder & CEO of Vygron Technology</span>, a Project Leader, and Technology Professional from <span className="font-semibold">Paruvai, Palladam, Tirupur, Tamil Nadu</span>. 
+                    I combine <span className="font-semibold">leadership, operations management, and technology expertise</span> to build AI-powered solutions, coordinate large-scale projects, and drive business impact through strategic execution.
                  </p>
                  
                  <p className="text-lg leading-relaxed text-gray-800 mb-6">
-                    As the founder of <span className="font-bold text-black">Vygron Technology</span> (based in Paruvai, Palladam), 
-                    I deliver scalable web applications and AI prototypes. My expertise spans the complete product lifecycle—from UX-focused frontends to robust Python/Node.js backends.
-                    My daily stack includes Next.js, Docker, Redis, and modern AI frameworks like TensorFlow and PyTorch.
+                    As the <span className="font-bold text-black">Founder of Vygron Technology</span>, I lead project delivery, manage stakeholder relationships, coordinate cross-functional teams, and oversee operational planning. 
+                    My expertise spans <span className="font-semibold">project management, business operations, AI automation, and full-stack development</span> using Next.js, Django, MERN Stack, and modern AI frameworks.
                  </p>
 
                  <p className="text-lg leading-relaxed text-gray-800">
-                    Beyond code, I actively contribute to the tech community as the <span className="font-semibold">IEEE Student Branch Vice Chairperson</span> at Karpagam Academy of Higher Education. 
-                    I’ve led events like <span className="font-semibold">HackSprint 2.0</span>, bridging the gap between technical depth and community leadership.
+                    Beyond technology, I've led <span className="font-semibold">4,000+ participant registrations for HackSprint 2.0</span>, coordinated operations for 400+ onsite participants, and served as <span className="font-semibold">IEEE Student Branch Vice Chairperson</span> at Karpagam Academy of Higher Education. 
+                    I excel at combining technical depth with leadership, operations, and strategic thinking to create measurable impact.
                  </p>
 
 
@@ -79,13 +77,15 @@ export default function About() {
              </motion.div>
 
 
-             {/* Education & Skills Grid */}
-             <div className="grid md:grid-cols-2 gap-12">
-                <Education />
-                <Skills />
-             </div>
+             {/* Education Only */}
+             <Education />
 
           </div>
+        </div>
+
+        {/* Skills Section - Full Width Below */}
+        <div className="mt-16">
+          <Skills />
         </div>
 
         {/* Experience Section - Full Width */}

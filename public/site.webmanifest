@@ -1,0 +1,21 @@
+{
+  "name": "Bala Surya Portfolio",
+  "short_name": "Bala Surya",
+  "description": "Portfolio of Bala Surya - Founder, Project Leader, and Technology Professional",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#e6e6e6",
+  "theme_color": "#FACC15",
+  "icons": [
+    {
+      "src": "/placeholder-logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/placeholder-logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

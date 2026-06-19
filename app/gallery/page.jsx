@@ -20,7 +20,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "https://balasurya.me/surya-founder.jpg",
+        url: "https://balasurya.me/red-blazer.png",
         width: 1200,
         height: 630,
         alt: "Bala Surya Gallery",
@@ -32,7 +32,7 @@ export const metadata = {
     title: "Gallery | Balasurya S Portfolio",
     description:
       "Browse visual highlights from Balasurya S portfolio and project journey.",
-    images: ["https://balasurya.me/surya-founder.jpg"],
+    images: ["https://balasurya.me/red-blazer.png"],
   },
 }
 

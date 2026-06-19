@@ -9,14 +9,14 @@ export default function sitemap() {
       lastModified,
       changeFrequency: "daily",
       priority: 1,
-      images: [`${SITE_URL}/surya-founder.jpg`],
+      images: [`${SITE_URL}/red-blazer.png`],
     },
     {
       url: `${SITE_URL}/gallery`,
       lastModified,
       changeFrequency: "weekly",
       priority: 0.85,
-      images: [`${SITE_URL}/surya-founder.jpg`],
+      images: [`${SITE_URL}/red-blazer.png`],
     },
   ]
 }

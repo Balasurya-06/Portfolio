@@ -31,7 +31,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: `${SITE_URL}/surya-founder.jpg`,
+        url: `${SITE_URL}/red-blazer.png`,
         width: 1200,
         height: 630,
         alt: "Bala Surya Portfolio",
@@ -43,7 +43,7 @@ export const metadata = {
     title: "Balasurya S | Full Stack Developer and AI Specialist",
     description:
       "Official portfolio of Balasurya S, Full Stack Developer and AI Specialist.",
-    images: [`${SITE_URL}/surya-founder.jpg`],
+    images: [`${SITE_URL}/red-blazer.png`],
   },
 }
 

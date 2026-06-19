@@ -1,7 +1,8 @@
 "use client"
 import { motion } from "framer-motion"
+import { Users, Target, Briefcase, TrendingUp, Lightbulb, CheckCircle, Layers, MessageSquare } from "lucide-react"
 
-// Simple SVG Icons for Skills
+// Simple SVG Icons for Technical Skills
 const Icons = {
   React: (props) => (
     <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
@@ -23,22 +24,14 @@ const Icons = {
        <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.2L19.5 8 12 11.5 4.5 8 12 4.2zM4 9.2l7 3.3v7.3l-7-3.5V9.2zm9 10.6v-7.3l7-3.3v7.1l-7 3.5z"/>
     </svg>
   ),
-  Tailwind: (props) => (
+  Django: (props) => (
     <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
-      <path d="M12.001 12c-5.895 2.766-4.505 8.358-10.45 8.358-1.077 0-1.954-.262-1.551-2.906.638-4.212 5.395-4.47 5.92-8.529C6.46 6.157 5.07 3.447 2.057 3.447c-1.154 0-1.859.349-1.36 2.658.742 3.468 4.743 3.618 5.753 6.912 3.033.456 4.343-4.542 10.686-4.542 1.076 0 2.126.15 1.55 2.906-.637 3.033-5.394 4.093-5.92 8.53-.54 2.765.85 5.47 3.863 5.47 1.155 0 2.096-.285 1.36-2.659-.741-2.396-4.742-5.462-5.99-10.722z"/>
+      <path d="M11.5 2v8.5c0 2-1.5 3.5-3.5 3.5S4.5 12.5 4.5 10.5V2H2v8.5C2 14 4.5 16.5 8 16.5s6-2.5 6-5.5V2h-2.5zM16 2v14.5h2.5V2H16zm5.5 4.5V2H19v4.5h2.5z"/>
     </svg>
   ),
-   JS: (props) => (
+  Python: (props) => (
     <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
-      <path d="M3 3h18v18H3V3zm13.1 14.1c1.3 0 2.4-.6 2.9-1.7l-1.5-.9c-.3.5-.8.9-1.4.9-.9 0-1.3-.6-1.3-1.5s.4-1.5 1.3-1.5c.6 0 1 .3 1.3.8l1.6-.9c-.6-1.1-1.7-1.7-2.9-1.7-2.2 0-3.6 1.6-3.6 3.4s1.4 3.1 3.6 3.1zm-5.4-3.1h-2v3h2c1.2 0 1.9-.7 1.9-1.6 0-.8-.7-1.4-1.9-1.4z m-2-1.8h2c1.2 0 1.9-.7 1.9-1.5 0-1-.7-1.5-1.9-1.5h-2v3z" />
-      <text x="6" y="16" fontSize="10" fontWeight="bold">JS</text>
-    </svg>
-  ),
-   TS: (props) => (
-    <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
-      <rect x="2" y="2" width="20" height="20" rx="4" />
-      <path d="M12 18h2v-7h-2v7zm-5-9v2h3v7h2v-7h3V9H7zm11 9h-2v-2h2v2zm0-4h-2v-2h2v2z" fill="white" />
-      <text x="12" y="15" fontSize="8" fontWeight="bold" fill="white" textAnchor="middle">TS</text>
+      <path d="M9.585 11.692h4.328s2.432.039 2.432-2.35V5.391S16.714 3 11.936 3C7.362 3 7.647 3 7.647 3l-.006 2.347h4.363v.645H5.816s-2.467-.247-2.467 4.327c0 4.573 2.148 4.573 2.148 4.573h1.28V12.65s-.07-2.148 2.104-2.148m.281-4.975c-.42 0-.761-.346-.761-.771s.341-.77.761-.77c.42 0 .762.345.762.77s-.342.771-.762.771m4.254 13.283h-4.328s-2.432-.039-2.432 2.35v3.951S7.286 28 12.064 28c4.574 0 4.289 0 4.289 0l.006-2.347h-4.363v-.645h6.188s2.467.247 2.467-4.327c0-4.573-2.148-4.573-2.148-4.573h-1.28v2.242s.07 2.148-2.104 2.148m-.281 4.975c.42 0 .761.346.761.771s-.341.77-.761.77c-.42 0-.762-.345-.762-.77s.342-.771.762-.771"/>
     </svg>
   ),
   Firebase: (props) => (
@@ -46,46 +39,108 @@ const Icons = {
         <path d="M3.89 15.67L6.5 4.6l2.13 4.19-4.74 6.88zM20.11 15.67l-2.66-13.8L12 12.16l8.11 3.51zM10.37 11.23L12 2l1.63 9.23L12 12.16l-1.63-.93zM12 13.91l-6.84-3.79-1.6 9.4 8.44 4.75 8.44-4.75-1.6-9.4L12 13.91z"/>
     </svg>
   ),
-  Figma: (props) => (
+  AgenticAI: (props) => (
     <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
-        <path d="M12 2v6H8.5a3.5 3.5 0 1 1 3.5-3.5zm0 12v-6h3.5a3.5 3.5 0 1 1-3.5 3.5zm0 0v-6h-3.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 3.5-1zm7-12h-3.5v6H19a3.5 3.5 0 1 0 0-3.5zm-7 6v6h-3.5a3.5 3.5 0 0 0 0-7H12z"/>
+      <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.2L19.5 8 12 11.5 4.5 8 12 4.2zM4 9.2l7 3.3v7.3l-7-3.5V9.2zm9 10.6v-7.3l7-3.3v7.1l-7 3.5z"/>
+      <circle cx="12" cy="12" r="3" fill="white"/>
+      <path d="M12 10v4M10 12h4" stroke="white" strokeWidth="1" fill="none"/>
+    </svg>
+  ),
+  DataAnalytics: (props) => (
+    <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
+      <path d="M3 3v18h18v-2H5V3H3zm4 14h2V9H7v8zm4 0h2V5h-2v12zm4 0h2v-6h-2v6zm4 0h2v-4h-2v4z"/>
     </svg>
   )
 }
 
 
 export default function Skills() {
-  const skills = [
-    { name: "React", bg: "bg-[#61DAFB]", text: "text-black", icon: Icons.React },
-    { name: "Next.js", bg: "bg-white", text: "text-black", icon: Icons.Next },
-    { name: "Node.js", bg: "bg-[#339933]", text: "text-white", icon: Icons.Node },
-    { name: "Tailwind", bg: "bg-[#06B6D4]", text: "text-white", icon: Icons.Tailwind },
-    { name: "JS", bg: "bg-[#F7DF1E]", text: "text-black", icon: Icons.JS },
-    { name: "TS", bg: "bg-[#3178C6]", text: "text-white", icon: Icons.TS },
-    { name: "Firebase", bg: "bg-[#FFCA28]", text: "text-black", icon: Icons.Firebase },
-    { name: "Figma", bg: "bg-[#F24E1E]", text: "text-white", icon: Icons.Figma },
+  const leadershipSkills = [
+    { name: "Project Management", icon: Target, color: "bg-blue-400", description: "Planning, execution & delivery" },
+    { name: "Team Leadership", icon: Users, color: "bg-green-400", description: "Leading cross-functional teams" },
+    { name: "Business Operations", icon: Briefcase, color: "bg-purple-400", description: "Operational excellence" },
+    { name: "Stakeholder Management", icon: MessageSquare, color: "bg-orange-400", description: "Communication & alignment" },
+    { name: "Strategic Planning", icon: Lightbulb, color: "bg-yellow-400", description: "Vision & roadmap creation" },
+    { name: "Process Improvement", icon: CheckCircle, color: "bg-pink-400", description: "Optimization & efficiency" },
+    { name: "Program Coordination", icon: Layers, color: "bg-cyan-400", description: "Multi-project oversight" },
+    { name: "Problem Solving", icon: TrendingUp, color: "bg-indigo-400", description: "Analytical decision-making" },
+  ]
+
+  const technicalSkills = [
+    { name: "React", bg: "bg-[#61DAFB]", icon: Icons.React, description: "Frontend UI development" },
+    { name: "Next.js", bg: "bg-black", icon: Icons.Next, description: "Full-stack React framework" },
+    { name: "Node.js", bg: "bg-[#339933]", icon: Icons.Node, description: "Backend JavaScript runtime" },
+    { name: "Django", bg: "bg-[#0C4B33]", icon: Icons.Django, description: "Python web framework" },
+    { name: "Python", bg: "bg-[#3776AB]", icon: Icons.Python, description: "Backend & AI development" },
+    { name: "Firebase", bg: "bg-[#FFCA28]", icon: Icons.Firebase, description: "Cloud & real-time database" },
+    { name: "Agentic AI", bg: "bg-[#FF6F00]", icon: Icons.AgenticAI, description: "AI agents & automation" },
+    { name: "Data Analytics", bg: "bg-[#4A90E2]", icon: Icons.DataAnalytics, description: "Insights & visualization" },
   ]
 
   return (
-    <div className="w-full">
-      <h3 className="text-2xl font-bold bg-yellow-200 inline-block px-2 mb-6 border border-black transform -rotate-1 rounded-sm">
-        Software Skills
-      </h3>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        {skills.map((skill, i) => (
-          <motion.div
-            key={i}
-            initial={{ scale: 0.8, opacity: 0 }}
-            whileInView={{ scale: 1, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: i * 0.05 }}
-            whileHover={{ scale: 1.05, rotate: 2 }}
-            className={`aspect-square rounded-[2rem] ${skill.bg} ${skill.text} flex flex-col items-center justify-center gap-2 font-bold text-sm shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-all cursor-default border-2 border-black`}
-          >
-            <skill.icon className="w-8 h-8 sm:w-10 sm:h-10" />
-            <span>{skill.name}</span>
-          </motion.div>
-        ))}
+    <div className="grid lg:grid-cols-2 gap-12">
+      {/* Leadership & Operations Skills - LEFT */}
+      <div>
+        <div className="relative inline-block mb-6">
+          <div className="absolute inset-0 bg-yellow-400 transform -rotate-1 rounded-lg"></div>
+          <h3 className="relative text-2xl md:text-3xl font-black uppercase bg-white border-4 border-black px-4 py-2 rounded-lg transform rotate-1 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+            Leadership & Operations
+          </h3>
+        </div>
+        
+        <div className="grid grid-cols-1 gap-4">
+          {leadershipSkills.map((skill, i) => (
+            <motion.div
+              key={i}
+              initial={{ scale: 0.9, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.05 }}
+              whileHover={{ scale: 1.02, y: -2 }}
+              className={`${skill.color} rounded-2xl p-4 flex items-start gap-3 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all cursor-default`}
+            >
+              <div className="flex-shrink-0 w-12 h-12 bg-white border-2 border-black rounded-xl flex items-center justify-center shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+                <skill.icon className="w-6 h-6 text-black" />
+              </div>
+              <div className="flex-1 min-w-0">
+                <h4 className="font-black text-black text-base leading-tight mb-1">{skill.name}</h4>
+                <p className="text-xs font-bold text-black/70 leading-snug">{skill.description}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      {/* Technical Skills - RIGHT */}
+      <div>
+        <div className="relative inline-block mb-6">
+          <div className="absolute inset-0 bg-blue-400 transform rotate-1 rounded-lg"></div>
+          <h3 className="relative text-2xl md:text-3xl font-black uppercase bg-white border-4 border-black px-4 py-2 rounded-lg transform -rotate-1 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+            Technical Skills
+          </h3>
+        </div>
+        
+        <div className="grid grid-cols-1 gap-4">
+          {technicalSkills.map((skill, i) => (
+            <motion.div
+              key={i}
+              initial={{ scale: 0.9, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.05 }}
+              whileHover={{ scale: 1.02, y: -2 }}
+              className={`${skill.bg} rounded-2xl p-4 flex items-start gap-3 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all cursor-default`}
+            >
+              <div className="flex-shrink-0 w-12 h-12 bg-white border-2 border-black rounded-xl flex items-center justify-center shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+                <skill.icon className="w-6 h-6 text-black" />
+              </div>
+              <div className="flex-1 min-w-0">
+                <h4 className="font-black text-white text-base leading-tight mb-1">{skill.name}</h4>
+                <p className="text-xs font-bold text-white/80 leading-snug">{skill.description}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </div>
   )

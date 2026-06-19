@@ -11,7 +11,7 @@ const INSTAGRAM = "https://www.instagram.com/surya.007._"
 const LINKEDIN  = "https://www.linkedin.com/in/balasurya06/"
 const EMAIL     = "mailto:balasurya9597@gmail.com"
 const SITE_URL  = "https://balasurya.me"
-const OG_IMAGE  = `${SITE_URL}/surya-founder.jpg`
+const OG_IMAGE  = `${SITE_URL}/red-blazer.png`
 const GOOGLE_SITE_VERIFICATION = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
 const BING_SITE_VERIFICATION = process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION
 const YANDEX_SITE_VERIFICATION = process.env.NEXT_PUBLIC_YANDEX_SITE_VERIFICATION
@@ -204,17 +204,17 @@ export const metadata = {
   /* ── Icons / Favicon ── */
   icons: {
     icon:    [
-      { url: "/surya-founder.jpg", type: "image/jpeg" },
-      { url: "/surya-founder.jpg", sizes: "32x32",  type: "image/jpeg" },
-      { url: "/surya-founder.jpg", sizes: "192x192", type: "image/jpeg" },
+      { url: "/red-blazer.png", type: "image/jpeg" },
+      { url: "/red-blazer.png", sizes: "32x32",  type: "image/jpeg" },
+      { url: "/red-blazer.png", sizes: "192x192", type: "image/jpeg" },
     ],
-    shortcut: "/surya-founder.jpg",
+    shortcut: "/red-blazer.png",
     apple:    [
-      { url: "/surya-founder.jpg", sizes: "180x180", type: "image/jpeg" },
+      { url: "/red-blazer.png", sizes: "180x180", type: "image/jpeg" },
     ],
     other: [
-      { rel: "apple-touch-icon-precomposed", url: "/surya-founder.jpg" },
-      { rel: "mask-icon",                    url: "/surya-founder.jpg", color: "#000000" },
+      { rel: "apple-touch-icon-precomposed", url: "/red-blazer.png" },
+      { rel: "mask-icon",                    url: "/red-blazer.png", color: "#000000" },
     ],
   },
 
@@ -255,9 +255,9 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
       <head>
         {/* ── Favicon ── */}
-        <link rel="icon"       href="/surya-founder.jpg" />
-        <link rel="shortcut icon" href="/surya-founder.jpg" type="image/jpeg" />
-        <link rel="apple-touch-icon" href="/surya-founder.jpg" />
+        <link rel="icon"       href="/red-blazer.png" />
+        <link rel="shortcut icon" href="/red-blazer.png" type="image/jpeg" />
+        <link rel="apple-touch-icon" href="/red-blazer.png" />
 
         {/* ── Canonical ── */}
         <link rel="canonical" href="https://balasurya.me" />
@@ -417,7 +417,7 @@ export default function RootLayout({ children }) {
                     "height":       512,
                     "caption":      "Vygron Technology Logo"
                   },
-                  "image":         `${SITE_URL}/surya-founder.jpg`,
+                  "image":         `${SITE_URL}/red-blazer.png`,
                   "description":
                     "Vygron Technology is a software development company founded by Balasurya S, specialising in Full Stack Web Development, AI Solutions, Mobile Apps, and SaaS Products.",
                   "founder": {
