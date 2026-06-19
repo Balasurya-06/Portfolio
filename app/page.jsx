@@ -3,18 +3,27 @@ import HomePage from "@/components/pages/home"
 const SITE_URL = "https://balasurya.me"
 
 export const metadata = {
-  title: "Balasurya S | Full Stack Developer and AI Specialist",
+  title: "Balasurya | Balasurya Suresh | Full Stack Developer and AI Specialist",
   description:
-    "Official portfolio of Balasurya S, Full Stack Developer and AI Specialist. Explore projects, skills, achievements, and contact details.",
+    "Official portfolio of Balasurya (Balasurya Suresh), Full Stack Developer and AI Specialist from Tirupur, India. Explore projects, skills, achievements, and contact details at balasurya.me",
   keywords: [
-    "Balasurya S",
-    "balasurya s",
-    "Bala Surya",
     "Balasurya",
+    "balasurya",
+    "Balasurya Suresh",
+    "balasurya suresh",
+    "Bala Surya",
+    "Balasurya S",
+    "balasurya.me",
+    "Balasurya portfolio",
+    "Balasurya Suresh portfolio",
+    "Balasurya developer",
+    "Balasurya Suresh developer",
     "Full Stack Developer",
     "AI Specialist",
     "Next.js Developer",
-    "Portfolio",
+    "Vygron Technology",
+    "Balasurya Tirupur",
+    "Balasurya Suresh Tirupur",
   ],
   robots: {
     index: true,
@@ -24,9 +33,9 @@ export const metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Balasurya S | Full Stack Developer and AI Specialist",
+    title: "Balasurya | Balasurya Suresh | Full Stack Developer and AI Specialist",
     description:
-      "Official portfolio of Balasurya S, Full Stack Developer and AI Specialist. Explore projects, skills, achievements, and contact details.",
+      "Official portfolio of Balasurya (Balasurya Suresh), Full Stack Developer and AI Specialist from Tirupur, India. Explore projects, skills, achievements, and contact details at balasurya.me",
     url: SITE_URL,
     type: "website",
     images: [
@@ -34,15 +43,15 @@ export const metadata = {
         url: `${SITE_URL}/red-blazer.png`,
         width: 1200,
         height: 630,
-        alt: "Bala Surya Portfolio",
+        alt: "Balasurya Portfolio | Balasurya Suresh",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Balasurya S | Full Stack Developer and AI Specialist",
+    title: "Balasurya | Balasurya Suresh | Full Stack Developer and AI Specialist",
     description:
-      "Official portfolio of Balasurya S, Full Stack Developer and AI Specialist.",
+      "Official portfolio of Balasurya (Balasurya Suresh), Full Stack Developer and AI Specialist from Tirupur, India.",
     images: [`${SITE_URL}/red-blazer.png`],
   },
 }

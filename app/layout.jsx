@@ -22,16 +22,16 @@ export const metadata = {
 
   /* ── Titles ── */
   title: {
-    default:  "Balasurya S | Full Stack Developer, AI Specialist, Founder of Vygron",
-    template: "%s | Balasurya S – Full Stack Developer & AI Specialist",
+    default:  "Balasurya | Balasurya Suresh | Full Stack Developer, AI Specialist, Founder of Vygron Technology",
+    template: "%s | Balasurya Suresh – Full Stack Developer & AI Specialist",
   },
 
   /* ── Description ── */
   description:
-    "Balasurya S is a top Full Stack Developer, AI Specialist, and Founder of Vygron Technology based in Tirupur, Tamil Nadu, India. Expert in Next.js, React, Node.js, Agentic AI, LLM Integration, and scalable web/mobile solutions. Explore portfolio, projects, and achievements.",
+    "Balasurya (Balasurya Suresh) is a top Full Stack Developer, AI Specialist, and Founder of Vygron Technology based in Tirupur, Tamil Nadu, India. Expert in Next.js, React, Node.js, Agentic AI, LLM Integration, and scalable web/mobile solutions. Explore Balasurya's portfolio, projects, and achievements at balasurya.me",
 
   abstract:
-    "Official portfolio of Bala Surya S (Balasurya), Full Stack Developer and AI Specialist from Tirupur, Tamil Nadu, India.",
+    "Official portfolio of Balasurya (Balasurya Suresh, Bala Surya S), Full Stack Developer and AI Specialist from Tirupur, Tamil Nadu, India.",
 
   /* ── Keywords ── */
   keywords: [
@@ -157,10 +157,10 @@ export const metadata = {
     locale:      "en_IN",
     alternateLocale: ["en_US"],
     url:         SITE_URL,
-    title:       "Balasurya S | Full Stack Developer, AI Specialist, Founder of Vygron",
+    title:       "Balasurya | Balasurya Suresh | Full Stack Developer, AI Specialist, Founder of Vygron",
     description:
-      "Balasurya S is a top Full Stack Developer, AI Specialist, and Founder of Vygron Technology based in Tirupur, Tamil Nadu, India. Explore portfolio, projects, and achievements.",
-    siteName: "Balasurya S Portfolio",
+      "Balasurya (Balasurya Suresh) is a top Full Stack Developer, AI Specialist, and Founder of Vygron Technology based in Tirupur, Tamil Nadu, India. Explore Balasurya's portfolio, projects, and achievements at balasurya.me",
+    siteName: "Balasurya Portfolio | Balasurya Suresh",
     firstName: "Bala Surya",
     lastName:  "S",
     username:  "balasurya06",
@@ -188,9 +188,9 @@ export const metadata = {
     card:        "summary_large_image",
     site:        "@balasurya_06",
     creator:     "@balasurya_06",
-    title:       "Balasurya S | Full Stack Developer, AI Specialist, Founder of Vygron",
+    title:       "Balasurya | Balasurya Suresh | Full Stack Developer, AI Specialist, Founder of Vygron",
     description:
-      "Balasurya S is a top Full Stack Developer, AI Specialist, and Founder of Vygron Technology based in Tirupur, Tamil Nadu, India.",
+      "Balasurya (Balasurya Suresh) is a top Full Stack Developer, AI Specialist, and Founder of Vygron Technology based in Tirupur, Tamil Nadu, India.",
     images: [
       {
         url:   OG_IMAGE,
@@ -226,12 +226,14 @@ export const metadata = {
   },
 
   other: {
-    subject: "Balasurya S Portfolio",
+    subject: "Balasurya Portfolio | Balasurya Suresh",
     topic: "Full Stack Development and AI Engineering",
     url: SITE_URL,
     "profile:username": "balasurya06",
     "geo.region": "IN-TN",
     "geo.placename": "Tirupur, Tamil Nadu, India",
+    name: "Balasurya | Balasurya Suresh",
+    identifier: "balasurya",
   },
 
   /* ── Extra Meta ── */
@@ -240,7 +242,7 @@ export const metadata = {
   appleWebApp: {
     capable:            true,
     statusBarStyle:     "black-translucent",
-    title:              "Balasurya S Portfolio",
+    title:              "Balasurya | Balasurya Suresh Portfolio",
   },
 
   formatDetection: {
@@ -280,9 +282,25 @@ export default function RootLayout({ children }) {
         <meta name="coverage"     content="Worldwide" />
         <meta name="distribution" content="Global" />
         <meta name="classification" content="Technology, Software Development, AI" />
-        <meta name="subject" content="Bala Surya Portfolio" />
+        <meta name="subject" content="Balasurya Portfolio | Balasurya Suresh" />
         <meta name="topic" content="Full Stack Development and AI Engineering" />
         <meta name="url" content="https://balasurya.me" />
+
+        {/* ── Brand & Identity Meta Tags ── */}
+        <meta name="identifier-url" content="https://balasurya.me" />
+        <meta name="directory" content="submission" />
+        <meta name="pagename" content="Balasurya | Balasurya Suresh Portfolio" />
+        <meta name="category" content="Technology" />
+        <meta name="copyright" content="Balasurya Suresh" />
+
+        {/* ── SEO-Critical Brand Keywords ── */}
+        <meta name="og:site_name" content="Balasurya | Balasurya Suresh" />
+        <meta name="application-name" content="Balasurya Portfolio" />
+        <meta name="msapplication-tooltip" content="Balasurya Suresh - Full Stack Developer" />
+        <meta name="DC.title" content="Balasurya | Balasurya Suresh Portfolio" />
+        <meta name="DC.creator" content="Balasurya Suresh" />
+        <meta name="DC.subject" content="Full Stack Development, AI Engineering" />
+        <meta name="DC.description" content="Official portfolio of Balasurya (Balasurya Suresh)" />
 
         {/* ── Social Profile Links ── */}
         <link rel="me" href="https://github.com/Balasurya-06" />
@@ -292,11 +310,18 @@ export default function RootLayout({ children }) {
         <link rel="author" href="https://balasurya.me" />
 
         {/* ── Profile meta ── */}
-        <meta name="author"       content="Bala Surya S" />
-        <meta name="designer"     content="Bala Surya S" />
-        <meta name="owner"        content="Bala Surya S" />
+        <meta name="author"       content="Balasurya Suresh" />
+        <meta name="designer"     content="Balasurya Suresh" />
+        <meta name="owner"        content="Balasurya Suresh" />
         <meta name="contact"      content="balasurya9597@gmail.com" />
         <meta name="reply-to"     content="balasurya9597@gmail.com" />
+
+        {/* ── Person & Brand Identity ── */}
+        <meta name="person" content="Balasurya" />
+        <meta name="fullname" content="Balasurya Suresh" />
+        <meta name="nickname" content="Balasurya" />
+        <meta name="given-name" content="Bala Surya" />
+        <meta name="family-name" content="S" />
 
         {/* ── OpenGraph extra ── */}
         <meta property="profile:first_name" content="Bala Surya" />
@@ -327,10 +352,13 @@ export default function RootLayout({ children }) {
                 {
                   "@type":     "Person",
                   "@id":       `${SITE_URL}/#person`,
-                  "name":      "Balasurya S",
-                  "alternateName": ["Bala Surya S", "Balasurya", "Balasurya Suresh", "S Bala Surya"],
-                  "identifier": "Balasurya",
-                  "disambiguatingDescription": "Balasurya - Full Stack Developer, AI Specialist, and Founder of Vygron Technology",
+                  "name":      "Balasurya",
+                  "givenName": "Bala Surya",
+                  "familyName": "Suresh",
+                  "additionalName": "S",
+                  "alternateName": ["Balasurya Suresh", "Bala Surya", "Balasurya S", "Bala Surya S", "S Bala Surya", "Surya Suresh"],
+                  "identifier": "balasurya",
+                  "disambiguatingDescription": "Balasurya (Balasurya Suresh) - Full Stack Developer, AI Specialist, and Founder of Vygron Technology from Tirupur, Tamil Nadu, India",
                   "url":       SITE_URL,
                   "image": {
                     "@type":       "ImageObject",
@@ -356,7 +384,7 @@ export default function RootLayout({ children }) {
                   "email":     "balasurya9597@gmail.com",
                   "jobTitle":  "Full Stack Developer & AI Specialist",
                   "description":
-                    "Bala Surya S is the Founder of Vygron Technology and a leading Full Stack Developer & AI Specialist based in Paruvai, Palladam, Tirupur, Tamil Nadu, India. Expert in Next.js, React, Node.js, Agentic AI, and Scalable Web Solutions.",
+                    "Balasurya (Balasurya Suresh) is the Founder of Vygron Technology and a leading Full Stack Developer & AI Specialist based in Paruvai, Palladam, Tirupur, Tamil Nadu, India. Expert in Next.js, React, Node.js, Agentic AI, and Scalable Web Solutions.",
                   "knowsAbout": [
                     "Next.js", "React.js", "Node.js", "Python", "Agentic AI",
                     "LLM Integration", "Generative AI", "Full Stack Development",
@@ -374,6 +402,11 @@ export default function RootLayout({ children }) {
                     "@type": "Organization",
                     "@id":   `${SITE_URL}/#organization`,
                     "name":  "Vygron Technology"
+                  },
+                  "founder": {
+                    "@type": "Organization",
+                    "name": "Vygron Technology",
+                    "url": SITE_URL
                   },
                   "alumniOf": {
                     "@type": "EducationalOrganization",
@@ -409,6 +442,7 @@ export default function RootLayout({ children }) {
                   "@id":         `${SITE_URL}/#organization`,
                   "name":        "Vygron Technology",
                   "alternateName": "Vygron Tech",
+                  "legalName":   "Vygron Technology",
                   "url":         SITE_URL,
                   "logo": {
                     "@type":       "ImageObject",
@@ -419,11 +453,11 @@ export default function RootLayout({ children }) {
                   },
                   "image":         `${SITE_URL}/red-blazer.png`,
                   "description":
-                    "Vygron Technology is a software development company founded by Balasurya S, specialising in Full Stack Web Development, AI Solutions, Mobile Apps, and SaaS Products.",
+                    "Vygron Technology is a software development company founded by Balasurya (Balasurya Suresh), specialising in Full Stack Web Development, AI Solutions, Mobile Apps, and SaaS Products.",
                   "founder": {
                     "@type": "Person",
                     "@id":   `${SITE_URL}/#person`,
-                    "name":  "Balasurya S"
+                    "name":  "Balasurya Suresh"
                   },
                   "foundingDate": "2023",
                   "areaServed":   "Worldwide",
@@ -452,14 +486,23 @@ export default function RootLayout({ children }) {
                   "@type":         "WebSite",
                   "@id":           `${SITE_URL}/#website`,
                   "url":           SITE_URL,
-                  "name":          "Balasurya S – Portfolio",
+                  "name":          "Balasurya Portfolio | Balasurya Suresh",
+                  "alternateName": "Balasurya.me",
                   "description":
-                    "Official portfolio website of Balasurya S – Full Stack Developer, AI Specialist & Founder of Vygron Technology.",
+                    "Official portfolio website of Balasurya (Balasurya Suresh) – Full Stack Developer, AI Specialist & Founder of Vygron Technology.",
                   "publisher": {
                     "@type": "Person",
                     "@id":   `${SITE_URL}/#person`
                   },
-                  "inLanguage":    "en-IN"
+                  "inLanguage":    "en-IN",
+                  "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": {
+                      "@type": "EntryPoint",
+                      "urlTemplate": "https://balasurya.me?s={search_term_string}"
+                    },
+                    "query-input": "required name=search_term_string"
+                  }
                 },
 
                 /* ── 4. WebPage / ProfilePage ───────────────── */
@@ -467,12 +510,13 @@ export default function RootLayout({ children }) {
                   "@type":         "ProfilePage",
                   "@id":           `${SITE_URL}/#profilepage`,
                   "url":           SITE_URL,
-                  "name":          "Balasurya S | Full Stack Developer & AI Specialist Portfolio",
+                  "name":          "Balasurya | Balasurya Suresh | Full Stack Developer & AI Specialist Portfolio",
                   "isPartOf":      { "@id": `${SITE_URL}/#website` },
                   "about":         { "@id": `${SITE_URL}/#person` },
                   "mainEntity":    { "@id": `${SITE_URL}/#person` },
                   "inLanguage":    "en-IN",
-                  "dateModified":  "2026-04-05",
+                  "datePublished": "2023-01-01",
+                  "dateModified":  "2026-06-19",
                   "image": {
                     "@type":   "ImageObject",
                     "url":      OG_IMAGE,
@@ -505,26 +549,34 @@ export default function RootLayout({ children }) {
                   "mainEntity": [
                     {
                       "@type": "Question",
-                      "name": "Who is Balasurya S?",
+                      "name": "Who is Balasurya?",
                       "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Balasurya S is a Full Stack Developer, AI Specialist, and Founder of Vygron Technology based in Tirupur, Tamil Nadu, India."
+                        "text": "Balasurya (Balasurya Suresh) is a Full Stack Developer, AI Specialist, and Founder of Vygron Technology based in Tirupur, Tamil Nadu, India. Visit balasurya.me to explore his portfolio."
                       }
                     },
                     {
                       "@type": "Question",
-                      "name": "What technologies does Balasurya S work with?",
+                      "name": "Who is Balasurya Suresh?",
                       "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Balasurya S works with Next.js, React, Node.js, Python, Agentic AI, and LLM integrations to build scalable web and AI solutions."
+                        "text": "Balasurya Suresh is a leading Full Stack Developer and AI Specialist from Tirupur, India. He founded Vygron Technology and specializes in Next.js, React, Node.js, and Agentic AI solutions."
                       }
                     },
                     {
                       "@type": "Question",
-                      "name": "How can I contact Balasurya S for projects?",
+                      "name": "What technologies does Balasurya work with?",
                       "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "You can connect through LinkedIn, GitHub, Instagram, or email at balasurya9597@gmail.com."
+                        "text": "Balasurya Suresh works with Next.js, React, Node.js, Python, Agentic AI, and LLM integrations to build scalable web and AI solutions."
+                      }
+                    },
+                    {
+                      "@type": "Question",
+                      "name": "How can I contact Balasurya for projects?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "You can connect with Balasurya Suresh through LinkedIn, GitHub, Instagram, or email at balasurya9597@gmail.com. Visit balasurya.me for more contact options."
                       }
                     }
                   ]
