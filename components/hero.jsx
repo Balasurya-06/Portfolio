@@ -121,7 +121,7 @@ export default function Hero() {
                  src="/red-blazer.png"
                  alt="Bala Surya"
                  fill
-                 className="object-cover rounded-[2rem] grayscale hover:grayscale-0 transition-all duration-500"
+                 className="object-cover rounded-[2rem] transition-all duration-500"
                  priority
                />
              </motion.div>

@@ -29,7 +29,7 @@ export default function About() {
                     <img 
                         src="/red-blazer.png" 
                         alt="Bala Surya – Founder of Vygron Technology in Paruvai, Palladam, Tirupur" 
-                        className="relative w-full h-[300px] lg:h-[450px] object-cover rounded-[2rem] grayscale z-10 shadow-xl"
+                        className="relative w-full h-[300px] lg:h-[450px] object-cover rounded-[2rem] z-10 shadow-xl"
                     />
                 </div>
 
