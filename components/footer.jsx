@@ -1,121 +1,135 @@
 "use client"
 import { motion } from "framer-motion"
-import { Github, Linkedin, Instagram, ArrowUp, Sparkles, Rocket, Code2 } from "lucide-react"
+import { Linkedin, Github, Instagram, Mail, MapPin, Phone, ArrowUp } from "lucide-react"
 import Image from "next/image"
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
 
+  const socialLinks = [
+    { icon: Linkedin, href: "https://www.linkedin.com/in/balasurya06/", label: "LinkedIn", color: "hover:bg-[#0A66C2]" },
+    { icon: Github, href: "https://github.com/Balasurya-06", label: "GitHub", color: "hover:bg-black" },
+    { icon: Instagram, href: "https://www.instagram.com/surya.007._", label: "Instagram", color: "hover:bg-gradient-to-br hover:from-purple-500 hover:via-pink-500 hover:to-orange-500" }
+  ]
+
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+    window.scrollTo({ top: 0, behavior: "smooth" })
   }
 
-  const socialLinks = [
-    { icon: Github, href: "https://github.com/Balasurya-06", label: "GitHub" },
-    { icon: Linkedin, href: "https://www.linkedin.com/in/balasurya06/", label: "LinkedIn" },
-    { icon: Instagram, href: "https://www.instagram.com/surya.007._", label: "Instagram" },
-  ]
-
-  const quickLinks = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/#about" },
-    { name: "Projects", href: "/#projects" },
-    { name: "Contact", href: "/#contact" },
-  ]
-
   return (
-    <footer className="relative bg-black text-white overflow-hidden">
+    <footer className="relative bg-[#1a1a1a] text-white overflow-hidden">
       
-      {/* Main Footer Content */}
-      <div className="relative">
-        
-        {/* Bottom Navigation & Info */}
-        <div className="bg-black border-t border-white/10 py-12">
-          <div className="w-[90%] mx-auto px-6 lg:px-16">
+      {/* Top Wave Decoration */}
+      <div className="absolute top-0 left-0 right-0 h-20 bg-[#E8E4DC]">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="absolute bottom-0 w-full h-full">
+          <path d="M0,0 C150,100 350,0 600,50 C850,100 1050,0 1200,50 L1200,120 L0,120 Z" fill="#1a1a1a"></path>
+        </svg>
+      </div>
+
+      <div className="relative pt-32 pb-12">
+        <div className="w-[95%] max-w-[1800px] mx-auto px-6">
+          
+          {/* Main Footer Content */}
+          <div className="grid md:grid-cols-3 gap-16 mb-16">
             
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
-              
-              {/* Logo/Brand with Photo */}
-              <div className="space-y-4">
-                <div className="flex items-center gap-6">
-                  {/* Clean Photo - Larger and more visible */}
-                  <div className="w-32 h-32 rounded-3xl overflow-hidden flex-shrink-0">
-                    <Image
-                      src="/surya.png"
-                      alt="Bala Surya"
-                      width={128}
-                      height={128}
-                      // className="object-cover w-full h-full"
-                    />
-                  </div>
-                  <div>
-                    <h3 className="text-3xl font-black text-white">Bala Surya</h3>
-                    <p className="text-base text-gray-400 font-medium">Founder & Technology Leader</p>
-                  </div>
-                </div>
-              </div>
+            {/* Brand Section */}
+            <div>
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="mb-8"
+              >
+                <h3 className="text-4xl font-black uppercase tracking-tight mb-2">
+                  BALA<span className="text-[#FF8C42]">SURYA</span>
+                </h3>
+                <p className="text-[#FF8C42] font-bold uppercase tracking-wide text-sm mb-6">
+                  Founder & Technology Leader
+                </p>
+                <p className="text-gray-400 leading-relaxed">
+                  Building AI-powered solutions, leading teams, and creating impactful products through technology, leadership, and strategic execution.
+                </p>
+              </motion.div>
 
-              {/* Quick Links */}
-              <div>
-                <h4 className="text-sm font-black uppercase text-gray-400 mb-4 tracking-wider">Quick Links</h4>
-                <ul className="space-y-2">
-                  {quickLinks.map((link, idx) => (
-                    <li key={idx}>
-                      <a 
-                        href={link.href}
-                        className="text-white hover:text-yellow-400 transition-colors font-medium text-sm flex items-center gap-2 group"
-                      >
-                        <span className="w-1.5 h-1.5 bg-yellow-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                        {link.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Social Links */}
-              <div>
-                <h4 className="text-sm font-black uppercase text-gray-400 mb-4 tracking-wider">Connect</h4>
-                <div className="flex gap-3">
-                  {socialLinks.map((social, idx) => (
-                    <motion.a
-                      key={idx}
-                      href={social.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      whileHover={{ y: -3, scale: 1.1 }}
-                      className="w-10 h-10 bg-white/10 hover:bg-white border-2 border-white/20 hover:border-white rounded-lg flex items-center justify-center transition-all group"
-                      aria-label={social.label}
-                    >
-                      <social.icon className="w-5 h-5 text-white group-hover:text-black transition-colors" />
-                    </motion.a>
-                  ))}
-                </div>
-              </div>
-
-            </div>
-
-            {/* Copyright Bar */}
-            <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-              <p className="text-gray-400 text-sm">
-                © Copyright {currentYear} Bala Surya. All rights reserved.
-              </p>
-              
+              {/* Back to Top Button */}
               <motion.button
                 onClick={scrollToTop}
-                whileHover={{ y: -3 }}
-                className="flex items-center gap-2 bg-white/10 hover:bg-yellow-400 border-2 border-white/20 hover:border-yellow-400 px-4 py-2 rounded-lg text-white hover:text-black transition-all font-bold text-sm"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center gap-3 px-6 py-3 bg-[#FF8C42] text-black rounded-full font-black text-sm uppercase hover:bg-white transition-all"
               >
-                Back to Top
                 <ArrowUp className="w-4 h-4" />
+                Back to Top
               </motion.button>
             </div>
 
+            {/* Quick Contact */}
+            <div>
+              <h4 className="text-2xl font-black uppercase mb-6">Get in Touch</h4>
+              <div className="space-y-4">
+                <a href="mailto:balasurya9597@gmail.com" className="flex items-center gap-3 text-gray-400 hover:text-[#FF8C42] transition-colors group">
+                  <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-[#FF8C42] transition-all">
+                    <Mail className="w-5 h-5" />
+                  </div>
+                  <span className="font-medium">balasurya9597@gmail.com</span>
+                </a>
+                <a href="tel:+919597075831" className="flex items-center gap-3 text-gray-400 hover:text-[#FF8C42] transition-colors group">
+                  <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-[#FF8C42] transition-all">
+                    <Phone className="w-5 h-5" />
+                  </div>
+                  <span className="font-medium">+91 9597075831</span>
+                </a>
+                <div className="flex items-center gap-3 text-gray-400 group">
+                  <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center">
+                    <MapPin className="w-5 h-5" />
+                  </div>
+                  <span className="font-medium">Tirupur, Tamil Nadu</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Social Links */}
+            <div>
+              <h4 className="text-2xl font-black uppercase mb-6">Follow Me</h4>
+              <div className="space-y-4">
+                {socialLinks.map((social, index) => (
+                  <motion.a
+                    key={index}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    className={`flex items-center gap-4 p-4 bg-white/5 rounded-2xl hover:scale-105 transition-all group ${social.color}`}
+                  >
+                    <social.icon className="w-6 h-6 text-white" />
+                    <span className="font-bold text-white">{social.label}</span>
+                  </motion.a>
+                ))}
+              </div>
+            </div>
+
           </div>
+
+          {/* Bottom Bar */}
+          <div className="border-t border-white/10 pt-8">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+              <p className="text-gray-400 text-sm font-medium text-center md:text-left">
+                © {currentYear} Balasurya S. Crafted with passion and code. All rights reserved.
+              </p>
+              
+              <div className="flex items-center gap-4">
+                <span className="px-6 py-2 bg-[#FF8C42] text-black rounded-full text-xs font-black uppercase animate-pulse">
+                  Open to Opportunities
+                </span>
+              </div>
+            </div>
+          </div>
+
         </div>
-
       </div>
-
     </footer>
   )
 }

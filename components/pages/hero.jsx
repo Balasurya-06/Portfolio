@@ -1,93 +1,133 @@
 "use client"
 import { motion } from "framer-motion"
-import { ArrowRight, Camera, PenTool, Video, Laptop, Mail, Phone, Instagram, Linkedin, Github } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { CheckCircle } from "lucide-react"
+import Image from "next/image"
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[90vh] bg-[#e6e6e6] text-[#1a1a1a] flex flex-col justify-center overflow-hidden pt-20">
-      {/* Background Elements */}
-      <div className="absolute top-0 right-0 w-[300px] lg:w-[500px] h-[300px] lg:h-[500px] bg-yellow-400 rounded-bl-full z-0 opacity-20" />
-      <div className="absolute bottom-0 left-0 w-[200px] lg:w-[300px] h-[200px] lg:h-[300px] bg-gray-200 rounded-tr-full z-0" />
-      
-      {/* Decorative Circles/Icons */}
-      <motion.div 
-        animate={{ rotate: 360 }}
-        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-        className="absolute top-20 left-20 text-gray-400 z-10"
-      >
-        <Camera className="w-12 h-12" />
-      </motion.div>
-      <motion.div 
-        animate={{ y: [0, -20, 0] }}
-        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-40 right-1/4 text-gray-400 z-10"
-      >
-        <Video className="w-10 h-10" />
-      </motion.div>
-
-      <div className="w-[90%] mx-auto px-6 lg:px-16 relative z-10 h-full flex flex-col lg:flex-row items-center">
+    <section className="relative bg-[#E8E4DC] overflow-hidden">
+      {/* Main Hero Section */}
+      <div className="relative w-full min-h-screen flex items-center justify-center pt-20">
         
-        {/* Left Content - Typography */}
-        <div className="flex-1 relative z-20 pt-10 lg:pt-0 flex flex-col justify-center">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="relative"
-          >
-            {/* Badge */}
-            <div className="absolute -top-8 left-0 bg-yellow-400 text-black font-black text-lg py-2 px-6 rounded-full transform -rotate-2 z-10 shadow-lg border-2 border-black">
-              Software Developer
-            </div>
-
-            <h1 className="text-[14vw] lg:text-[200px] leading-[0.9] lg:leading-[0.8] font-black tracking-tighter text-[#2a2a2a] relative uppercase">
-              <span className="block">PORTO</span>
-              <span className="block pl-4 lg:pl-10">FOLIO<span className="text-yellow-400">.</span></span>
-            </h1>
-
-            <div className="mt-10 flex items-center gap-6">
-              <div className="w-16 h-16 rounded-full bg-black text-white flex items-center justify-center hover:scale-110 transition-transform duration-300">
-                 <ArrowRight className="w-8 h-8" />
+        {/* Text Layer - BEHIND photo - Full Width Edge to Edge */}
+        <div className="absolute inset-0 z-[1] flex items-center justify-start">
+          <div className="w-full pl-[4vw] pr-[4vw]">
+            <motion.h1 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-[12vw] md:text-[11.5vw] lg:text-[11vw] font-black uppercase leading-[0.85] tracking-[-0.03em]"
+              style={{ fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, sans-serif' }}
+            >
+              {/* Line 1: I'M A FOUNDER (with orange background) */}
+              <div className="block">
+                I'M A 
+                <span className="relative inline-block ml-[0.3em]">
+                  <span className="relative z-10">FOUNDER</span>
+                  {/* Orange rectangle behind FOUNDER */}
+                  <motion.div 
+                    initial={{ scaleX: 0 }}
+                    animate={{ scaleX: 1 }}
+                    transition={{ delay: 0.5, duration: 0.6 }}
+                    className="absolute bottom-[12%] left-[-1%] w-[102%] h-[42%] bg-[#FF8C42] origin-left"
+                    style={{ zIndex: -1 }}
+                  />
+                </span>
               </div>
-              <div>
-                  <p className="font-black text-2xl uppercase tracking-wide">Bala Surya</p>
-                  <p className="text-gray-500 font-medium">Founder @ Vygron</p>
+              
+              {/* Line 2: DEVELO (outline) + PER AND */}
+              <div className="block">
+                <span 
+                  style={{
+                    color: 'transparent',
+                    WebkitTextStroke: '2.8px #1a1a1a',
+                    WebkitTextFillColor: 'transparent'
+                  }}
+                >
+                  DEVELO
+                </span>
+                <span className="ml-[-0.02em]">PER AND</span>
               </div>
-            </div>
-          </motion.div>
-        </div>
 
-        {/* Right Content - Image */}
-        <div className="flex-1 relative h-full flex items-end justify-end mt-10 lg:mt-0">
-          <div className="relative w-full max-w-[300px] lg:max-w-[500px] aspect-[4/5]">
-             {/* Yellow Background Shape */}
-             <div className="absolute top-10 right-0 w-3/4 h-3/4 bg-yellow-400 rounded-[3rem] -z-10" />
-             <div className="absolute top-20 right-[-20px] w-full h-full border-2 border-gray-400 rounded-[3rem] -z-20" />
-             
-             {/* Star Badge */}
-             <div className="absolute -top-14 -right-14 w-24 h-24 z-20 flex items-center justify-center animate-spin-slow">
-                <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full text-yellow-400 drop-shadow-md">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                </svg>
-             </div>
+              {/* Line 3: PROJ (outline) + ECT */}
+              <div className="block">
+                <span 
+                  style={{
+                    color: 'transparent',
+                    WebkitTextStroke: '2.8px #1a1a1a',
+                    WebkitTextFillColor: 'transparent'
+                  }}
+                >
+                  PROJ
+                </span>
+                <span className="ml-[-0.02em]">ECT</span>
+              </div>
 
-             <motion.img
-               src="/red-blazer.png"
-               alt="Bala Surya – Founder of Vygron Technology in Paruvai, Palladam, Tirupur"
-               className="w-full h-full object-cover rounded-[2rem] grayscale hover:grayscale-0 transition-all duration-500"
-               initial={{ opacity: 0, y: 50 }}
-               animate={{ opacity: 1, y: 0 }}
-               transition={{ duration: 0.8 }}
-             />
+              {/* Line 4: COORDIN (with orange) + ATOR */}
+              <div className="block">
+                <span className="relative inline-block">
+                  <span className="relative z-10">COORDIN</span>
+                  {/* Orange rectangle behind COORDIN */}
+                  <motion.div 
+                    initial={{ scaleX: 0 }}
+                    animate={{ scaleX: 1 }}
+                    transition={{ delay: 0.7, duration: 0.6 }}
+                    className="absolute bottom-[12%] left-[-1%] w-[102%] h-[42%] bg-[#FF8C42] origin-left"
+                    style={{ zIndex: -1 }}
+                  />
+                </span>
+                <span className="ml-[-0.02em]">ATOR</span>
+              </div>
+            </motion.h1>
           </div>
         </div>
 
-      </div>
-      
-      {/* Side Text */}
-      <div className="hidden lg:block absolute right-10 top-1/2 -translate-y-1/2 rotate-90 origin-right text-xs font-mono text-gray-500 tracking-widest">
-        Surya© 2026
+        {/* Orange Geometric Arrow Shape - MIDDLE layer, left side */}
+        <motion.div 
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.3, duration: 0.8 }}
+          className="absolute z-[5] left-[10%] top-1/2 -translate-y-1/2"
+        >
+          <svg width="300" height="380" viewBox="0 0 300 380" fill="none">
+            <path 
+              d="M150 40 L250 140 L200 190 L250 240 L150 340 L100 290 L150 240 L100 190 Z" 
+              fill="#FF8C42"
+              opacity="0.95"
+            />
+          </svg>
+        </motion.div>
+
+        {/* Centered Grayscale Photo - ON TOP of text */}
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.2, duration: 0.8 }}
+          className="absolute z-[10] inset-0 flex items-center justify-center"
+        >
+          <div className="relative w-[450px] h-[82vh] max-h-[750px]">
+            <Image 
+              src="/red-blazer.png"
+              alt="Balasurya S"
+              fill
+              className="object-contain grayscale"
+              priority
+            />
+          </div>
+        </motion.div>
+
+        {/* Circular Orange Badge - TOP layer, bottom center */}
+        <motion.div 
+          initial={{ opacity: 0, scale: 0, rotate: -180 }}
+          animate={{ opacity: 1, scale: 1, rotate: 0 }}
+          transition={{ delay: 0.8, type: "spring", stiffness: 200 }}
+          className="absolute z-[20] bottom-[10vh] left-1/2 -translate-x-1/2 w-[150px] h-[150px] rounded-full bg-[#FF8C42] flex flex-col items-center justify-center shadow-[0_20px_60px_rgba(255,140,66,0.4)]"
+        >
+          <div className="text-white text-center">
+            <div className="text-6xl font-black leading-none mb-2">2+</div>
+            <div className="text-[11px] font-bold uppercase tracking-[0.2em]">YEARS</div>
+          </div>
+        </motion.div>
       </div>
     </section>
   )

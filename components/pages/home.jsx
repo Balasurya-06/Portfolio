@@ -36,7 +36,7 @@ export default function HomePage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#e6e6e6] text-[#1a1a1a] relative overflow-hidden">
+    <div className="min-h-screen bg-white text-[#1a1a1a] relative overflow-hidden">
       <CustomCursor />
       
       {/* 

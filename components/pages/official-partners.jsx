@@ -1,6 +1,6 @@
 "use client"
 import { motion } from "framer-motion"
-import { Building2, Shield, Heart, GraduationCap } from "lucide-react"
+import Image from "next/image"
 
 export default function OfficialPartners() {
   const partners = [
@@ -8,88 +8,95 @@ export default function OfficialPartners() {
       name: "Karpagam Academy",
       role: "Educational Partner",
       description: "Collaborating on tech workshops & innovation.",
-      image: "/partners/karpagam.png",
-      color: "bg-white",
-      textColor: "text-black"
+      image: "/partners/karpagam.png"
     },
     {
       name: "Anti Terrorism Squad",
       role: "Security Innovation",
       description: "Developing advanced surveillance solutions.",
-      image: "/partners/ats.png",
-      color: "bg-white",
-      textColor: "text-black"
+      image: "/partners/ats.png"
     },
     {
       name: "Karupa Foundation",
       role: "Social Impact",
       description: "Empowering communities through technology.",
-      image: "/partners/karupa.png",
-      color: "bg-white",
-      textColor: "text-black"
+      image: "/partners/karupa.png"
     },
     {
       name: "ICSCIS",
       role: "Research & Development",
       description: "Innovative research in computer science.",
-      image: "/partners/icscis.png",
-      color: "bg-white",
-      textColor: "text-black"
+      image: "/partners/icscis.png"
     }
   ]
 
   return (
-    <section className="py-20 bg-[#e6e6e6] text-[#1a1a1a] relative overflow-hidden">
-      <div className="w-[90%] mx-auto px-6 lg:px-16 relative z-10">
+    <section className="relative bg-[#1a1a1a] text-white py-24 px-6">
+      <div className="w-[95%] max-w-[1800px] mx-auto">
         
         {/* Section Header */}
         <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="flex flex-col items-center justify-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-20"
         >
-             <div className="relative inline-block mb-4">
-                <div className="absolute inset-0 bg-yellow-400 transform -rotate-1 rounded-lg translate-y-2"></div>
-                <h2 className="relative text-4xl md:text-6xl font-black uppercase tracking-tighter text-black px-6 py-2 bg-white border-4 border-black rounded-lg transform rotate-1">
-                    Official Partners
-                </h2>
-            </div>
-            <p className="font-bold text-gray-500 uppercase tracking-widest mt-4">Trusted Collaborations</p>
+          <motion.h2 
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="text-xs font-bold text-gray-400 uppercase tracking-[0.3em] mb-6 flex items-center gap-3"
+          >
+            <span className="w-12 h-0.5 bg-[#FF8C42]"></span>
+            COLLABORATIONS
+          </motion.h2>
+          <h3 className="text-5xl md:text-6xl lg:text-7xl font-black mb-6 uppercase tracking-tight leading-[0.9]">
+            OFFICIAL <span className="text-[#FF8C42]">PARTNERS</span>
+          </h3>
+          <p className="text-xl text-gray-300 leading-relaxed max-w-3xl">
+            Trusted collaborations with leading organizations in education, security, social impact, and research & development.
+          </p>
         </motion.div>
 
         {/* Partners Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {partners.map((partner, index) => (
-                <motion.div
-                    key={index}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
-                    className="group bg-white border-4 border-black rounded-3xl p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center h-full"
-                >
-                    <div className={`w-36 h-36 ${partner.color} ${partner.textColor} border-2 border-black rounded-full flex items-center justify-center mb-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] group-hover:scale-105 transition-transform duration-300 overflow-hidden p-4 relative`}>
-                        {partner.image ? (
-                             <img src={partner.image} alt={partner.name} className="w-full h-full object-contain" />
-                        ) : (
-                             <partner.icon className="w-12 h-12" />
-                        )}
-                    </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {partners.map((partner, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 hover:bg-white/10 transition-all group text-center"
+            >
+              {/* Logo Container */}
+              <div className="w-32 h-32 mx-auto mb-6 bg-white rounded-2xl flex items-center justify-center p-4 group-hover:scale-105 transition-transform shadow-lg">
+                <div className="relative w-full h-full">
+                  <Image 
+                    src={partner.image}
+                    alt={partner.name}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              </div>
 
-                    <h3 className="text-xl font-black uppercase leading-tight mb-2">
-                        {partner.name}
-                    </h3>
-                    
-                    <div className="inline-block px-3 py-1 bg-gray-100 border border-black rounded-full text-xs font-bold uppercase tracking-wider mb-4">
-                        {partner.role}
-                    </div>
+              {/* Partner Name */}
+              <h4 className="text-xl font-black uppercase leading-tight mb-3">
+                {partner.name}
+              </h4>
+              
+              {/* Role Badge */}
+              <div className="inline-block px-4 py-2 bg-[#FF8C42] text-black rounded-full text-xs font-bold uppercase tracking-wider mb-4">
+                {partner.role}
+              </div>
 
-                    <p className="text-sm font-medium text-gray-600 leading-relaxed">
-                        {partner.description}
-                    </p>
-                </motion.div>
-            ))}
+              {/* Description */}
+              <p className="text-sm text-gray-300 leading-relaxed">
+                {partner.description}
+              </p>
+            </motion.div>
+          ))}
         </div>
 
       </div>

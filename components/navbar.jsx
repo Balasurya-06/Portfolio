@@ -1,7 +1,7 @@
 "use client"
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Menu, X, ArrowUpRight } from "lucide-react"
+import { Menu, X } from "lucide-react"
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -39,52 +39,34 @@ export default function Navbar() {
   return (
     <>
         <motion.nav
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out flex justify-center ${
-                scrolled ? "py-4" : "py-6"
+            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+                scrolled ? "bg-[#E8E4DC]/95 backdrop-blur-md shadow-lg py-4" : "bg-transparent py-6"
             }`}
-             initial={{ y: -100 }}
-             animate={{ y: 0 }}
-             transition={{ duration: 0.5 }}
+            initial={{ y: -100 }}
+            animate={{ y: 0 }}
+            transition={{ duration: 0.5 }}
         >
-            <div 
-                className={`flex items-center justify-between transition-all duration-500 ease-in-out ${
-                    scrolled 
-                    ? "w-[90%] md:w-[70%] lg:w-[60%] bg-white/80 backdrop-blur-md border border-white/20 shadow-lg rounded-full px-6 py-3" 
-                    : "w-[90%] bg-transparent px-0 py-2"
-                }`}
-            >
+            <div className="w-[95%] max-w-[1800px] mx-auto px-6 flex items-center justify-between">
+                
                 {/* Logo */}
-                <motion.div
-                    className="flex items-center cursor-pointer"
+                <motion.button
                     onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                     whileHover={{ scale: 1.05 }}
+                    className="text-2xl md:text-3xl font-black uppercase tracking-tight text-black"
                 >
-                    <div className="relative">
-                        <span className="font-marker text-2xl font-bold text-black z-10 relative">Bala Surya</span>
-                        <div className="absolute -bottom-1 left-0 w-full h-2 bg-yellow-400/50 -rotate-2 -z-0 rounded-sm"></div>
-                    </div>
-                </motion.div>
+                    BALA<span className="text-[#FF8C42]">SURYA</span>
+                </motion.button>
 
                 {/* Desktop Nav */}
-                <div className="hidden md:flex items-center gap-1 bg-white/50 rounded-full px-2 py-1 border border-white/20 backdrop-blur-sm">
+                <div className="hidden md:flex items-center gap-2">
                     {navItems.map((item) => (
-                         item.href ? (
-                            <a
-                                key={item.name}
-                                href={item.href}
-                                className="px-4 py-2 text-sm font-bold text-gray-600 hover:text-black hover:bg-white hover:shadow-sm rounded-full transition-all duration-300 capitalize"
-                            >
-                                {item.name}
-                            </a>
-                         ) : (
-                            <button
-                                key={item.name}
-                                onClick={() => scrollToSection(item.id)}
-                                className="px-4 py-2 text-sm font-bold text-gray-600 hover:text-black hover:bg-white hover:shadow-sm rounded-full transition-all duration-300 capitalize"
-                            >
-                                {item.name}
-                            </button>
-                         )
+                        <button
+                            key={item.name}
+                            onClick={() => scrollToSection(item.id)}
+                            className="px-6 py-3 text-sm font-bold text-black hover:text-[#FF8C42] transition-colors uppercase tracking-wide"
+                        >
+                            {item.name}
+                        </button>
                     ))}
                 </div>
 
@@ -92,55 +74,53 @@ export default function Navbar() {
                 <div className="hidden md:block">
                      <button 
                         onClick={() => scrollToSection("contact")}
-                        className="group flex items-center gap-2 bg-black text-white px-5 py-2.5 rounded-full font-bold text-sm hover:bg-yellow-400 hover:text-black transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5"
+                        className="px-8 py-3 bg-black text-white rounded-full font-bold text-sm hover:bg-[#FF8C42] hover:text-black transition-all uppercase tracking-wide shadow-lg"
                      >
                         Let's Talk
-                        <ArrowUpRight className="w-4 h-4 group-hover:rotate-45 transition-transform duration-300" />
                      </button>
                 </div>
 
                 {/* Mobile Menu Toggle */}
-                <button className="md:hidden p-2 text-black" onClick={toggleMenu}>
-                    {isMenuOpen ? <X /> : <Menu />}
+                <button 
+                    className="md:hidden p-2 text-black hover:text-[#FF8C42] transition-colors" 
+                    onClick={toggleMenu}
+                >
+                    {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
                 </button>
             </div>
         </motion.nav>
 
-        {/* Mobile Navigation Menu Overlay */}
+        {/* Mobile Navigation Menu */}
         <AnimatePresence>
             {isMenuOpen && (
             <motion.div
-                className="fixed inset-0 z-40 bg-white/95 backdrop-blur-xl flex flex-col items-center justify-center space-y-8 md:hidden"
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.2 }}
+                className="fixed inset-0 z-40 bg-[#E8E4DC] flex flex-col items-center justify-center space-y-8 md:hidden"
+                initial={{ opacity: 0, x: "100%" }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: "100%" }}
+                transition={{ duration: 0.3 }}
             >
-                 {navItems.map((item, index) => (
-                    item.href ? (
-                        <a
-                            key={item.name}
-                            href={item.href}
-                            className="text-3xl font-black text-black hover:text-yellow-500 capitalize"
-                        >
-                            {item.name}
-                        </a>
-                    ) : (
-                        <button
-                            key={item.name}
-                            onClick={() => scrollToSection(item.id)}
-                            className="text-3xl font-black text-black hover:text-yellow-500 capitalize"
-                        >
-                            {item.name}
-                        </button>
-                    )
+                {navItems.map((item, index) => (
+                    <motion.button
+                        key={item.name}
+                        onClick={() => scrollToSection(item.id)}
+                        initial={{ opacity: 0, x: 50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: index * 0.1 }}
+                        className="text-4xl font-black text-black hover:text-[#FF8C42] uppercase tracking-tight"
+                    >
+                        {item.name}
+                    </motion.button>
                 ))}
-                <button
+                <motion.button
                     onClick={() => scrollToSection("contact")}
-                    className="text-3xl font-black text-black hover:text-yellow-500 capitalize"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.5 }}
+                    className="px-12 py-4 bg-black text-white rounded-full font-black text-xl uppercase tracking-wide mt-8"
                 >
                     Let's Talk
-                </button>
+                </motion.button>
             </motion.div>
             )}
         </AnimatePresence>
