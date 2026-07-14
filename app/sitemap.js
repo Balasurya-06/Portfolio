@@ -1,4 +1,4 @@
-const SITE_URL = "https://balasurya.me"
+const SITE_URL = "https://balasurya02.vercel.app"
 
 export default function sitemap() {
   const lastModified = new Date()

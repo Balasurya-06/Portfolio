@@ -10,7 +10,7 @@ const GITHUB    = "https://github.com/Balasurya-06"
 const INSTAGRAM = "https://www.instagram.com/surya.007._"
 const LINKEDIN  = "https://www.linkedin.com/in/balasurya06/"
 const EMAIL     = "mailto:balasurya9597@gmail.com"
-const SITE_URL  = "https://balasurya.me"
+const SITE_URL  = "https://balasurya02.vercel.app"
 const OG_IMAGE  = `${SITE_URL}/red-blazer.png`
 const GOOGLE_SITE_VERIFICATION = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
 const BING_SITE_VERIFICATION = process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION
@@ -28,7 +28,7 @@ export const metadata = {
 
   /* ── Description ── */
   description:
-    "Balasurya (Balasurya Suresh) is a top Full Stack Developer, AI Specialist, and Founder of Vygron Technology based in Tirupur, Tamil Nadu, India. Expert in Next.js, React, Node.js, Agentic AI, LLM Integration, and scalable web/mobile solutions. Explore Balasurya's portfolio, projects, and achievements at balasurya.me",
+    "Balasurya (Balasurya Suresh) is a top Full Stack Developer, AI Specialist, and Founder of Vygron Technology based in Tirupur, Tamil Nadu, India. Expert in Next.js, React, Node.js, Agentic AI, LLM Integration, and scalable web/mobile solutions. Explore Balasurya's portfolio, projects, and achievements at balasurya02.vercel.app",
 
   abstract:
     "Official portfolio of Balasurya (Balasurya Suresh, Bala Surya S), Full Stack Developer and AI Specialist from Tirupur, Tamil Nadu, India.",
@@ -40,9 +40,9 @@ export const metadata = {
     /* ── Name & Personal Branding ─────────────────────────── */
     "Bala Surya", "Balasurya", "Balasurya Suresh", "Bala Surya S", "S Bala Surya",
     "Surya Suresh", "Surya Suresh Vygron", "Surya Suresh KAHE", "Surya Suresh Paruvai", "Surya Suresh Palladam",
-    "Surya Suresh Tirupur", "Surya Suresh Portfolio", "surya-suresh.me", "balasurya.me",
+    "Surya Suresh Tirupur", "Surya Suresh Portfolio", "surya-suresh.me", "balasurya02.vercel.app", "balasurya.in",
     "Bala Surya Vygron", "Balasurya KAHE", "Bala Surya Paruvai", "Bala Surya Palladam",
-    "Bala Surya Tirupur", "Bala Surya Portfolio", "balasurya.me",
+    "Bala Surya Tirupur", "Bala Surya Portfolio", "balasurya02.vercel.app", "balasurya.in",
     "Balasurya Suresh Full Stack Developer", "Balasurya Suresh AI Specialist", "Surya Suresh Full Stack Developer", "Surya Suresh AI Specialist",
     "Balasurya Suresh Software Architect", "Surya Suresh Software Architect", "Balasurya Suresh Web Developer", "Surya Suresh Web Developer",
     "Balasurya Suresh Next.js", "Surya Suresh Next.js", "Balasurya Suresh React.js", "Surya Suresh React.js",
@@ -159,7 +159,7 @@ export const metadata = {
     url:         SITE_URL,
     title:       "Balasurya | Balasurya Suresh | Full Stack Developer, AI Specialist, Founder of Vygron",
     description:
-      "Balasurya (Balasurya Suresh) is a top Full Stack Developer, AI Specialist, and Founder of Vygron Technology based in Tirupur, Tamil Nadu, India. Explore Balasurya's portfolio, projects, and achievements at balasurya.me",
+      "Balasurya (Balasurya Suresh) is a top Full Stack Developer, AI Specialist, and Founder of Vygron Technology based in Tirupur, Tamil Nadu, India. Explore Balasurya's portfolio, projects, and achievements at balasurya02.vercel.app",
     siteName: "Balasurya Portfolio | Balasurya Suresh",
     firstName: "Bala Surya",
     lastName:  "S",
@@ -234,6 +234,7 @@ export const metadata = {
     "geo.placename": "Tirupur, Tamil Nadu, India",
     name: "Balasurya | Balasurya Suresh",
     identifier: "balasurya",
+    "alternate-domain": "balasurya.in",
   },
 
   /* ── Extra Meta ── */
@@ -262,7 +263,7 @@ export default function RootLayout({ children }) {
         <link rel="apple-touch-icon" href="/red-blazer.png" />
 
         {/* ── Canonical ── */}
-        <link rel="canonical" href="https://balasurya.me" />
+        <link rel="canonical" href="https://balasurya02.vercel.app" />
 
         {/* ── Preconnect for performance ── */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -284,10 +285,10 @@ export default function RootLayout({ children }) {
         <meta name="classification" content="Technology, Software Development, AI" />
         <meta name="subject" content="Balasurya Portfolio | Balasurya Suresh" />
         <meta name="topic" content="Full Stack Development and AI Engineering" />
-        <meta name="url" content="https://balasurya.me" />
+        <meta name="url" content="https://balasurya02.vercel.app" />
 
         {/* ── Brand & Identity Meta Tags ── */}
-        <meta name="identifier-url" content="https://balasurya.me" />
+        <meta name="identifier-url" content="https://balasurya02.vercel.app" />
         <meta name="directory" content="submission" />
         <meta name="pagename" content="Balasurya | Balasurya Suresh Portfolio" />
         <meta name="category" content="Technology" />
@@ -307,7 +308,7 @@ export default function RootLayout({ children }) {
         <link rel="me" href="https://www.linkedin.com/in/balasurya06/" />
         <link rel="me" href="https://www.instagram.com/surya.007._" />
         <link rel="me" href="mailto:balasurya9597@gmail.com" />
-        <link rel="author" href="https://balasurya.me" />
+        <link rel="author" href="https://balasurya02.vercel.app" />
 
         {/* ── Profile meta ── */}
         <meta name="author"       content="Balasurya Suresh" />
@@ -379,7 +380,8 @@ export default function RootLayout({ children }) {
                     GITHUB,
                     INSTAGRAM,
                     LINKEDIN,
-                    "https://balasurya.me",
+                    "https://balasurya02.vercel.app",
+                    "https://balasurya.in",
                   ],
                   "email":     "balasurya9597@gmail.com",
                   "jobTitle":  "Full Stack Developer & AI Specialist",
@@ -499,7 +501,7 @@ export default function RootLayout({ children }) {
                     "@type": "SearchAction",
                     "target": {
                       "@type": "EntryPoint",
-                      "urlTemplate": "https://balasurya.me?s={search_term_string}"
+                      "urlTemplate": "https://balasurya02.vercel.app?s={search_term_string}"
                     },
                     "query-input": "required name=search_term_string"
                   }
@@ -552,7 +554,7 @@ export default function RootLayout({ children }) {
                       "name": "Who is Balasurya?",
                       "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Balasurya (Balasurya Suresh) is a Full Stack Developer, AI Specialist, and Founder of Vygron Technology based in Tirupur, Tamil Nadu, India. Visit balasurya.me to explore his portfolio."
+                        "text": "Balasurya (Balasurya Suresh) is a Full Stack Developer, AI Specialist, and Founder of Vygron Technology based in Tirupur, Tamil Nadu, India. Visit balasurya02.vercel.app to explore his portfolio."
                       }
                     },
                     {
@@ -576,7 +578,7 @@ export default function RootLayout({ children }) {
                       "name": "How can I contact Balasurya for projects?",
                       "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "You can connect with Balasurya Suresh through LinkedIn, GitHub, Instagram, or email at balasurya9597@gmail.com. Visit balasurya.me for more contact options."
+                        "text": "You can connect with Balasurya Suresh through LinkedIn, GitHub, Instagram, or email at balasurya9597@gmail.com. Visit balasurya02.vercel.app for more contact options."
                       }
                     }
                   ]
